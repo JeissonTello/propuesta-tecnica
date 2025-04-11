@@ -1,63 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modelo de Desarrollo - SGI</title>
+  <title>Modelo del Sistema - SGI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="header-container">
-      <h1>Modelo de Desarrollo</h1>
-      <p class="subtitle">Sistema de Gestión de Inventarios (SGI)</p>
+      <h1>Modelo del Sistema de Gestión de Inventarios (SGI)</h1>
+      <p class="subtitle">Arquitectura y Componentes Clave</p>
       <nav>
         <a href="index.html">Inicio</a>
+        <a href="analisis.html">Análisis</a>
         <a href="contexto.html">Contexto</a>
         <a href="ficha.html">Ficha</a>
         <a href="propuesta.html">Propuesta</a>
         <a href="modelo.html">Modelo</a>
-        <a href="analisis.html">Análisis</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="card">
-      <h2>Modelo de Desarrollo Adoptado</h2>
-      <p>Para el desarrollo del Sistema de Gestión de Inventarios (SGI), se adopta una metodología ágil, específicamente <strong>Scrum</strong>. Esta metodología permite una mejor adaptación a los cambios y una entrega incremental del sistema, asegurando una evolución constante basada en la retroalimentación del cliente.</p>
-    </section>
-
-    <section class="card">
-      <h2>Fases del Proyecto</h2>
+      <h2>Arquitectura General del Sistema</h2>
+      <p>El SGI se basa en una arquitectura modular, escalable y distribuida, que permite integrar diversas funcionalidades dentro de un mismo sistema. La arquitectura está dividida en tres capas principales:</p>
       <ul>
-        <li><strong>Inicio:</strong> Recolección de requerimientos, definición de alcance y recursos.</li>
-        <li><strong>Planificación:</strong> Estimación de tareas, definición del backlog y planificación de sprints.</li>
-        <li><strong>Desarrollo:</strong> Implementación iterativa de funcionalidades mediante sprints.</li>
-        <li><strong>Pruebas:</strong> Validación del sistema, pruebas unitarias, funcionales y de integración.</li>
-        <li><strong>Entrega:</strong> Presentación final del sistema, documentación y retroalimentación.</li>
+        <li><strong>Capa de Presentación (Frontend):</strong> Interfaz de usuario desarrollada con React, donde los usuarios interactúan con el sistema de manera intuitiva.</li>
+        <li><strong>Capa de Lógica de Negocio (Backend):</strong> Desarrollo en Node.js, encargado de procesar las solicitudes y ejecutar la lógica del negocio, como la gestión de inventarios, pedidos, usuarios, entre otros.</li>
+        <li><strong>Capa de Datos (Base de Datos):</strong> Base de datos SQL (MySQL o PostgreSQL), para almacenar y gestionar la información de los productos, pedidos, usuarios y transacciones.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Arquitectura del Sistema</h2>
-      <p>El sistema SGI se desarrollará utilizando una arquitectura cliente-servidor con las siguientes tecnologías:</p>
+      <h2>Componentes Principales del Modelo</h2>
+      <p>Los componentes clave que forman parte del modelo del SGI son:</p>
       <ul>
-        <li><strong>Frontend:</strong> React.js</li>
-        <li><strong>Backend:</strong> Node.js + Express</li>
-        <li><strong>Base de datos:</strong> PostgreSQL o MySQL</li>
-        <li><strong>APIs:</strong> RESTful para la comunicación entre frontend y backend</li>
+        <li><strong>Gestión de Inventarios:</strong> Módulo central que permite registrar, consultar, actualizar y eliminar productos en el inventario, y realizar el seguimiento de existencias en tiempo real.</li>
+        <li><strong>Gestión de Pedidos:</strong> Módulo que permite crear, modificar y consultar pedidos de clientes y proveedores, manteniendo un registro detallado de todas las transacciones.</li>
+        <li><strong>Gestión de Usuarios:</strong> Módulo de administración de roles y permisos, que permite controlar el acceso y las acciones de los usuarios dentro del sistema.</li>
+        <li><strong>Reportes y Análisis:</strong> Módulo que permite generar reportes de rendimiento, ventas, inventarios y otros indicadores clave para la toma de decisiones empresariales.</li>
       </ul>
     </section>
 
-    <div class="section-links">
-      <a href="analisis.html" class="btn">➡️ Siguiente: Análisis</a>
-    </div>
-  </main>
+    <section class="card">
+      <h2>Flujo de Información</h2>
+      <p>El flujo de información en el SGI se gestiona de la siguiente manera:</p>
+      <ul>
+        <li><strong>Entrada de Datos:</strong> Los usuarios ingresan información a través de la interfaz, como productos, pedidos o ventas.</li>
+        <li><strong>Procesamiento de Datos:</strong> La lógica de negocio procesa las solicitudes, actualiza las bases de datos y ejecuta las reglas de negocio correspondientes.</li>
+        <li><strong>Salida de Datos:</strong> Los datos procesados se presentan al usuario en forma de reportes, alertas y resúmenes.</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
-  </footer>
-</body>
-</html>
+    <section class="card">
+      <h2>Modelo de Base de Datos</h2>
+      <p>El modelo de base de datos está diseñado para garantizar la integridad de la información, optimizar el rendimiento y facilitar la escalabilidad del sistema. Este modelo incluye:</p>
+      <ul>
+        <li><strong>Entidades:</strong> Productos, Pedidos, Usuarios, Transacciones, etc.</li>
+        <li><strong>Relaciones:</strong> Relación de pedidos con productos, usuarios con roles, productos con inventarios, entre otras.</li>
+        <li
