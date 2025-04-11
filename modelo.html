@@ -2,57 +2,85 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modelo del Proyecto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modelo - Sistema de Gestión de Inventarios</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="header">
-    <div class="logo">Sistema de Gestión de Inventarios</div>
-    <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="contexto.html">Contexto</a>
-      <a href="analisis.html">Análisis</a>
-      <a href="modelo.html" class="active">Modelo</a>
-      <a href="ficha.html">Ficha</a>
-      <a href="propuesta.html">Propuesta</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Sistema de Gestión de Inventarios</h1>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="analisis.html">Análisis</a>
+        <a href="modelo.html" class="active">Modelo</a>
+        <a href="propuesta.html">Propuesta</a>
+        <a href="ficha.html">Ficha Técnica</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
-    <section class="cards-section">
-      <h2 class="section-title">Modelo del Proyecto</h2>
-      <div class="card">
-        <p>
-          El modelo del proyecto está basado en una arquitectura modular y escalable, utilizando tecnologías actuales como Node.js, React y bases de datos SQL para garantizar eficiencia, mantenimiento y adaptabilidad.
-        </p>
-        <p>
-          A continuación, se representa un modelo conceptual que identifica las entidades principales del sistema:
-        </p>
-
-        <ul class="styled-list">
-          <li><strong>Productos:</strong> Almacena la información clave de cada ítem en inventario.</li>
-          <li><strong>Usuarios:</strong> Controla los accesos y roles del sistema.</li>
-          <li><strong>Movimientos:</strong> Registra entradas y salidas de productos.</li>
-          <li><strong>Reportes:</strong> Genera informes automáticos para toma de decisiones.</li>
-        </ul>
-
-        <p>
-          El sistema también contempla una interfaz moderna e intuitiva para que cualquier empleado pueda utilizarlo sin necesidad de conocimientos técnicos avanzados.
-        </p>
-
-        <div class="image-box">
-          <img src="assets/img/modelo.png" alt="Modelo del Sistema" class="responsive-img">
-          <p class="img-caption">Modelo general del sistema propuesto (puedes reemplazar esta imagen por tu diagrama).</p>
-        </div>
+    <section class="section">
+      <h2 class="section-title">Diagramas de Clases</h2>
+      <p>A continuación, se presentan los diagramas de clases del Sistema de Gestión de Inventarios:</p>
+      <div class="image-container">
+        <!-- Inserta aquí los diagramas de clases en formato de imagen -->
+        <img src="diagrama_clases.png" alt="Diagrama de Clases" class="diagram-img" />
       </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Diagramas de Actividades</h2>
+      <p>A continuación, se presentan los diagramas de actividades del Sistema de Gestión de Inventarios:</p>
+      <div class="image-container">
+        <!-- Inserta aquí los diagramas de actividades en formato de imagen -->
+        <img src="diagrama_actividades.png" alt="Diagrama de Actividades" class="diagram-img" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Glosario Técnico y Vocabulario de Codificación</h2>
+      <table class="glossary-table">
+        <tr>
+          <th>Término</th>
+          <th>Descripción</th>
+        </tr>
+        <tr>
+          <td>API</td>
+          <td>Interfaz de Programación de Aplicaciones. Es un conjunto de definiciones y protocolos que permiten que una aplicación se comunique con otra.</td>
+        </tr>
+        <tr>
+          <td>Backend</td>
+          <td>Parte de una aplicación o sistema que no es visible para el usuario, encargada de la lógica del negocio y la gestión de datos.</td>
+        </tr>
+        <!-- Agrega más términos según sea necesario -->
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Glosario de Gestión Tecnológica</h2>
+      <table class="glossary-table">
+        <tr>
+          <th>Término</th>
+          <th>Descripción</th>
+        </tr>
+        <tr>
+          <td>Escalabilidad</td>
+          <td>Capacidad de un sistema para aumentar su rendimiento o capacidad al agregar más recursos, como servidores o usuarios.</td>
+        </tr>
+        <tr>
+          <td>Disponibilidad</td>
+          <td>La medida de tiempo que un sistema está operativo y accesible para los usuarios.</td>
+        </tr>
+        <!-- Agrega más términos según sea necesario -->
+      </table>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Jeisson Smith Galvis Tello - Todos los derechos reservados</p>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
