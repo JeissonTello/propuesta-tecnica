@@ -66,8 +66,9 @@ nav a {
 }
 
 nav a:hover {
-  color: #f4f4f4;
+  color: white;
   transform: scale(1.05);
+  background-color: var(--button-hover);
 }
 
 footer {
