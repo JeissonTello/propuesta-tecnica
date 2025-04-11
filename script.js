@@ -11,6 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
     botonArriba.style.cursor = "pointer";
     document.body.appendChild(botonArriba);
 
+    gsap.from(".animated-title", {
+  opacity: 0,
+  y: -50,
+  duration: 1,
+  stagger: 0.3,
+});
+
+gsap.from(".animated-description", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  delay: 0.5,
+});
+
+
     botonArriba.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
