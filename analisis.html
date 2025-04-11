@@ -3,51 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Análisis - Propuesta Técnica SGI</title>
+  <title>Análisis del Sistema - SGI</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="header-container">
-      <h1>Sistema de Gestión de Inventarios (SGI)</h1>
-      <p class="subtitle">Análisis del Proyecto</p>
+      <h1>Análisis del Sistema</h1>
+      <p class="subtitle">Sistema de Gestión de Inventarios (SGI)</p>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="analisis.html" class="active">Análisis</a>
         <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha Técnica</a>
-        <a href="modelo.html">Modelo Técnico</a>
+        <a href="ficha.html">Ficha</a>
         <a href="propuesta.html">Propuesta</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="analisis.html">Análisis</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Análisis del Sistema de Gestión de Inventarios (SGI)</h2>
-      <p>En esta sección se detallan los objetivos, los requerimientos y las necesidades que motivan el desarrollo del sistema de gestión de inventarios.</p>
+    <section class="card">
+      <h2>Recolección de Requisitos</h2>
+      <p>Durante esta fase se identificaron las necesidades del usuario final a través de entrevistas, encuestas y análisis de procesos. Se establecieron los requisitos funcionales y no funcionales que orientarán el desarrollo del SGI.</p>
     </section>
 
-    <section class="content">
-      <h3>Objetivos del Proyecto</h3>
-      <p>El principal objetivo de este sistema es optimizar el proceso de control de inventarios, proporcionando una plataforma que facilite la gestión de productos, pedidos, proveedores y reportes de stock.</p>
-
-      <h3>Requerimientos Funcionales</h3>
+    <section class="card">
+      <h2>Requisitos Funcionales</h2>
       <ul>
-        <li>Gestión de productos</li>
-        <li>Control de inventarios en tiempo real</li>
-        <li>Generación de reportes automatizados</li>
-        <li>Gestión de proveedores</li>
+        <li>Gestión de productos (registro, actualización y eliminación).</li>
+        <li>Control de inventario por entradas y salidas.</li>
+        <li>Gestión de pedidos y proveedores.</li>
+        <li>Generación de reportes en tiempo real.</li>
+        <li>Autenticación y control de acceso por roles.</li>
       </ul>
     </section>
+
+    <section class="card">
+      <h2>Requisitos No Funcionales</h2>
+      <ul>
+        <li>Interfaz amigable y accesible desde cualquier dispositivo.</li>
+        <li>Alto rendimiento y capacidad de respuesta.</li>
+        <li>Seguridad en el manejo de la información.</li>
+        <li>Escalabilidad para soportar múltiples usuarios simultáneamente.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Casos de Uso</h2>
+      <p>Se identificaron los principales casos de uso que describen las interacciones del usuario con el sistema. Cada caso fue documentado con sus actores, flujo principal y alternativo, y criterios de éxito.</p>
+      <p>Ejemplos:</p>
+      <ul>
+        <li>Registrar nuevo producto.</li>
+        <li>Actualizar inventario tras una venta.</li>
+        <li>Generar informe mensual de inventario.</li>
+      </ul>
+    </section>
+
+    <div class="section-links">
+      <a href="index.html" class="btn">🏠 Volver al inicio</a>
+    </div>
   </main>
 
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
-    </div>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
   </footer>
 </body>
 </html>
