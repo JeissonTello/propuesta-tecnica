@@ -19,13 +19,14 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-a {
+a, .btn {
   text-decoration: none;
-  color: #333;
+  color: var(--primary-color);
 }
 
-a:hover {
-  color: #1E88E5; /* Azul vibrante */
+a:hover, .btn:hover {
+  color: white;
+  background-color: var(--button-hover);/* Azul vibrante */
 }
 
 header {
