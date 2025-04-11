@@ -2,86 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Propuesta Técnica SGI</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
+  <header class="header">
     <div class="container">
-      <h1>Sistema de Gestión de Inventarios (SGI)</h1>
-      <p class="subtitle">Propuesta Técnica y Económica</p>
-      <nav class="navbar">
-        <a href="index.html">Inicio</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha técnica</a>
-        <a href="propuesta.html">Propuesta</a>
-        <a href="modelo.html">Modelo del sistema</a>
-        <a href="analisis.html">Análisis</a>
+      <h1 class="logo">SGI - Sistema de Gestión de Inventarios</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="propuesta.html" class="nav-link">Propuesta</a>
+        <a href="contexto.html" class="nav-link">Contexto</a>
+        <a href="analisis.html" class="nav-link">Análisis</a>
+        <a href="modelo.html" class="nav-link">Modelo</a>
+        <a href="ficha.html" class="nav-link">Ficha Técnica</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero-section animate-on-scroll">
-      <img src="assets/banner.jpg" alt="Banner SGI" class="banner" />
-      <div class="intro-text">
-        <h2>¡Bienvenido a la propuesta del SGI!</h2>
-        <p>
-          Este sitio expone la planeación técnica y económica para el desarrollo del Sistema de Gestión de Inventarios. Un proyecto orientado a optimizar los procesos internos, mejorar el control de productos y facilitar la toma de decisiones.
-        </p>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Bienvenido a la propuesta técnica</h2>
+      <p>Explora el diseño y planificación de un sistema que transforma la gestión de inventarios, optimizando recursos y agilizando procesos.</p>
+      <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
+    </div>
+  </section>
 
-    <section class="info-box section animate-on-scroll">
-      <h3>Datos del Aprendiz</h3>
-      <ul>
-        <li><strong>Nombre:</strong> Jeisson Smith Galvis Tello</li>
-        <li><strong>Programa:</strong> Análisis y Desarrollo de Software</li>
-        <li><strong>Centro de formación:</strong> SENA</li>
-        <li><strong>Ficha:</strong> 220501094</li>
-        <li><strong>Fecha de entrega:</strong> Abril 2025</li>
-      </ul>
-    </section>
+  <section class="cards-section">
+    <h2 class="section-title">Explora las secciones</h2>
+    <div class="cards">
+      <a href="propuesta.html" class="card">
+        <h3>📘 Propuesta</h3>
+        <p>Objetivos, alcance y justificación del sistema.</p>
+      </a>
+      <a href="contexto.html" class="card">
+        <h3>🌐 Contexto</h3>
+        <p>Entorno actual y necesidades del proyecto.</p>
+      </a>
+      <a href="analisis.html" class="card">
+        <h3>🧠 Análisis</h3>
+        <p>Identificación de requerimientos y procesos clave.</p>
+      </a>
+      <a href="modelo.html" class="card">
+        <h3>📊 Modelo</h3>
+        <p>Diagrama de clases, base de datos y estructura lógica.</p>
+      </a>
+      <a href="ficha.html" class="card">
+        <h3>📝 Ficha Técnica</h3>
+        <p>Datos del aprendiz, ficha, tecnologías utilizadas.</p>
+      </a>
+    </div>
+  </section>
 
-    <section class="section-links section animate-on-scroll">
-      <h3>Explora la propuesta</h3>
-      <div class="card-container">
-        <a href="contexto.html" class="card">📘 Contexto</a>
-        <a href="ficha.html" class="card">📂 Ficha técnica</a>
-        <a href="propuesta.html" class="card">📝 Propuesta técnica</a>
-        <a href="modelo.html" class="card">🧩 Modelo del sistema</a>
-        <a href="analisis.html" class="card">🔍 Análisis funcional</a>
-      </div>
-    </section>
-
-    <!-- 🔥 SLIDER DE TESTIMONIOS -->
-    <section class="testimonial-slider section animate-on-scroll">
-      <h2>Testimonios</h2>
-      <div class="slider-container">
-        <div class="slider">
-          <div class="slide">
-            <p>"El SGI ha mejorado notablemente el flujo de inventarios y la precisión en los reportes."</p>
-            <cite>- Juan Pérez, Gerente de Logística</cite>
-          </div>
-          <div class="slide">
-            <p>"Una herramienta potente y muy fácil de usar, ahora todo está centralizado y automatizado."</p>
-            <cite>- Ana Martínez, Responsable de Inventario</cite>
-          </div>
-          <div class="slide">
-            <p>"El diseño del sistema es moderno, escalable y se adapta perfectamente a nuestras necesidades."</p>
-            <cite>- Carlos Gómez, Jefe de TI</cite>
-          </div>
-        </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="main-footer">
-    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Jeisson Smith Galvis Tello - SENA ADSI 220501094</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
