@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Propuesta - Propuesta Técnica SGI</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta Técnica SGI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <div class="header-container">
-      <h1>Sistema de Gestión de Inventarios (SGI)</h1>
-      <p class="subtitle">Propuesta Técnica y Económica</p>
+      <h1>Propuesta Técnica y Económica</h1>
+      <p class="subtitle">Sistema de Gestión de Inventarios (SGI)</p>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="analisis.html">Análisis</a>
+        <a href="ficha.html">Ficha</a>
         <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha Técnica</a>
-        <a href="modelo.html">Modelo Técnico</a>
-        <a href="propuesta.html" class="active">Propuesta</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="analisis.html">Análisis</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Propuesta Técnica y Económica</h2>
-      <p>En esta sección se detallan las soluciones propuestas para el desarrollo del sistema, incluyendo los aspectos técnicos y económicos necesarios para llevarlo a cabo.</p>
-    </section>
+  <main class="info-box">
+    <h2>Objetivo del Proyecto</h2>
+    <p>
+      Desarrollar un Sistema de Gestión de Inventarios (SGI) que optimice el control de productos, el seguimiento de pedidos y la toma de decisiones empresariales mediante una plataforma tecnológica moderna, segura y eficiente.
+    </p>
 
-    <section class="content">
-      <h3>Solución Propuesta</h3>
-      <p>La solución propuesta consiste en un sistema modular basado en Node.js para el backend y React para el frontend. El sistema permitirá gestionar productos, pedidos, inventarios y proveedores de manera eficiente.</p>
+    <h2>Justificación</h2>
+    <p>
+      Actualmente muchas empresas gestionan sus inventarios de forma manual o con herramientas poco eficientes, lo que genera pérdidas, errores de stock y retrasos. Con este sistema buscamos digitalizar y automatizar los procesos claves de inventario, generando mejoras significativas en el rendimiento operativo.
+    </p>
 
-      <h3>Costos Estimados</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Componente</th>
-            <th>Costo Estimado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Licencias de Software</td>
-            <td>$500</td>
-          </tr>
-          <tr>
-            <td>Infraestructura (servidores, base de datos)</td>
-            <td>$1500</td>
-          </tr>
-          <tr>
-            <td>Desarrollo (horas de trabajo)</td>
-            <td>$2000</td>
-          </tr>
-        </tbody>
-      </table>
+    <h2>Alcance</h2>
+    <ul>
+      <li>Registrar, actualizar y eliminar productos del inventario</li>
+      <li>Controlar entradas y salidas de productos</li>
+      <li>Gestionar pedidos y proveedores</li>
+      <li>Generar reportes y estadísticas de movimientos</li>
+      <li>Control de usuarios con diferentes roles</li>
+    </ul>
 
-      <h3>Beneficios</h3>
-      <ul>
-        <li>Optimización de los procesos internos de inventario</li>
-        <li>Mayor control sobre los productos y pedidos</li>
-        <li>Mejor gestión de proveedores y stock</li>
-      </ul>
-    </section>
+    <h2>Metodología</h2>
+    <p>
+      El desarrollo del sistema seguirá una metodología ágil basada en Scrum, permitiendo entregas parciales, revisión continua con el cliente y ajustes en el proceso. Se utilizarán herramientas modernas como Node.js, React y bases de datos SQL.
+    </p>
+
+    <h2>Recursos Necesarios</h2>
+    <ul>
+      <li>Equipo de desarrollo con conocimientos en tecnologías web</li>
+      <li>Computador con software de desarrollo (VS Code, Git, etc.)</li>
+      <li>Base de datos SQL</li>
+      <li>Servidor de pruebas y producción (puede ser local o nube)</li>
+    </ul>
   </main>
 
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
-    </div>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
   </footer>
+
 </body>
 </html>
