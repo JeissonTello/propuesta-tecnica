@@ -1,115 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Propuesta Técnica - SGI</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Inventarios</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Sistema de Gestión de Inventarios</div>
+            <nav class="nav">
+                <a href="#descripcion">Descripción</a>
+                <a href="#modelo">Modelo</a>
+                <a href="#costos">Costos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <h1>SGI - Sistema de Gestión de Inventarios</h1>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="propuesta.html">Propuesta</a>
-        <a href="analisis.html">Análisis</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha</a>
-        <a href="modelo.html">Modelo</a>
-      </nav>
-    </div>
-  </header>
+    <!-- HERO -->
+    <section class="hero" id="descripcion">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bienvenido al Sistema de Gestión de Inventarios</h2>
+                <p>Este sistema ha sido diseñado para optimizar y automatizar los procesos de gestión de inventarios en empresas. Ofrece funcionalidades clave como la gestión de productos, control de stock, generación de reportes y mucho más.</p>
+                <p>Con un enfoque moderno y eficiente, nuestro sistema permite que los usuarios puedan gestionar sus inventarios de manera más ágil y precisa, reduciendo tiempos y costos operativos.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/inventario.jpg" alt="Sistema de Gestión de Inventarios">
+            </div>
+        </div>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Bienvenido a la Propuesta Técnica</h2>
-      <p>Optimización de procesos con el Sistema de Gestión de Inventarios (SGI).</p>
-      <a href="#propuesta" class="btn-primary">Ver Propuesta</a>
-    </div>
-    <div class="hero-image">
-      <img src="https://via.placeholder.com/600x400" alt="Imagen de Propuesta">
-    </div>
-  </section>
+    <!-- MODELO -->
+    <section class="cards-section" id="modelo">
+        <div class="container">
+            <h3 class="section-title">Modelo del Sistema</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3>Diagrama de Clases</h3>
+                    <p>El diagrama de clases del sistema muestra las entidades principales, sus atributos y relaciones, proporcionando una estructura clara para la base de datos y el desarrollo del backend.</p>
+                </div>
+                <div class="card">
+                    <h3>Diagrama de Actividades</h3>
+                    <p>Este diagrama describe los flujos de trabajo dentro del sistema, desde la recepción de productos hasta la gestión de inventarios, pasando por la facturación y el control de stock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- GRÁFICOS -->
-  <section class="charts">
-    <h3>Gráficos de Progreso</h3>
-    <canvas id="myChart" width="400" height="200"></canvas>
-  </section>
+    <!-- COSTOS -->
+    <section class="cards-section" id="costos">
+        <div class="container">
+            <h3 class="section-title">Costos Estimados</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3>Desarrollo de Software</h3>
+                    <p>El desarrollo de la aplicación web incluye módulos de ventas, facturación, inventario y reportes. Estimación de costo: $20,000,000 COP</p>
+                </div>
+                <div class="card">
+                    <h3>Investigación y Análisis</h3>
+                    <p>El análisis de requerimientos y estudio de mercado para la creación de una arquitectura robusta del software. Estimación de costo: $2,500,000 COP</p>
+                </div>
+                <div class="card">
+                    <h3>Diseño UX/UI</h3>
+                    <p>Creación de interfaces atractivas y una experiencia de usuario intuitiva. Estimación de costo: $2,000,000 COP</p>
+                </div>
+                <div class="card">
+                    <h3>Base de Datos</h3>
+                    <p>Configuración y optimización de base de datos MySQL/PostgreSQL. Estimación de costo: $3,000,000 COP</p>
+                </div>
+                <div class="card">
+                    <h3>Infraestructura y Hosting</h3>
+                    <p>Uso de Apache, con opción de migración futura a servicios de nube como AWS, Azure o Google Cloud. Estimación de costo: $2,500,000 COP</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- CARDS -->
-  <section class="cards-section">
-    <h3 class="section-title">Módulos del SGI</h3>
-    <div class="cards">
-      <div class="card">
-        <h3>Gestión de Productos</h3>
-        <p>Mejora la visibilidad y control de los productos en inventario.</p>
-        <a href="#" class="btn-card">Ver Detalles</a>
-      </div>
-      <div class="card">
-        <h3>Gestión de Pedidos</h3>
-        <p>Automatiza el proceso de pedidos y mejora la eficiencia.</p>
-        <a href="#" class="btn-card">Ver Detalles</a>
-      </div>
-      <div class="card">
-        <h3>Gestión de Usuarios</h3>
-        <p>Administra los permisos y roles de los usuarios de manera eficiente.</p>
-        <a href="#" class="btn-card">Ver Detalles</a>
-      </div>
-    </div>
-  </section>
+    <!-- CONTACTO -->
+    <section class="footer" id="contacto">
+        <div class="container">
+            <p>Para más información, contáctanos al correo: <a href="mailto:contacto@sginventarios.com">contacto@sginventarios.com</a></p>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Sistema de Gestión de Inventarios | Todos los derechos reservados</p>
-  </footer>
+    <!-- BOTÓN DE VOLVER ARRIBA -->
+    <button class="scroll-to-top" onclick="window.scrollTo(0, 0)">↑</button>
 
-  <!-- SCROLL TO TOP BUTTON -->
-  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
-
-  <script>
-    // Gráfico de ejemplo con Chart.js
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
-        datasets: [{
-          label: '# de Ventas',
-          data: [12, 19, 3, 5],
-          backgroundColor: 'rgba(0, 123, 255, 0.2)',
-          borderColor: 'rgba(0, 123, 255, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-
-    // Animaciones con GSAP
-    gsap.from(".header", { opacity: 0, duration: 1, y: -50 });
-    gsap.from(".hero-content", { opacity: 0, duration: 1, delay: 0.5, x: -50 });
-    gsap.from(".hero-image", { opacity: 0, duration: 1, delay: 1, x: 50 });
-    gsap.from(".card", { opacity: 0, duration: 1, stagger: 0.3, y: 50 });
-    gsap.from(".scroll-to-top", { opacity: 0, duration: 1, delay: 1.5, scale: 0.5 });
-
-    // Función Scroll to Top
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
+    <script>
+        // Función para el botón de volver arriba
+        document.querySelector('.scroll-to-top').addEventListener('click', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
 </body>
 </html>
