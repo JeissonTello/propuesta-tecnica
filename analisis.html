@@ -3,43 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contexto del Proyecto</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Análisis de Costos</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
   <header class="header">
-    <div class="logo">Sistema de Gestión de Inventarios</div>
-    <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="contexto.html" class="active">Contexto</a>
-      <a href="analisis.html">Análisis</a>
-      <a href="modelo.html">Modelo</a>
-      <a href="ficha.html">Ficha</a>
-      <a href="propuesta.html">Propuesta</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Sistema de Gestión de Inventarios</h1>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="ficha.html">Ficha Técnica</a>
+        <a href="propuesta.html">Propuesta</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="analisis.html" class="active">Análisis</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
     <section class="cards-section">
-      <h2 class="section-title">Contexto del Proyecto</h2>
-      <div class="card">
-        <p>
-          El Sistema de Gestión de Inventarios surge como respuesta a la necesidad de muchas empresas de organizar y optimizar sus procesos internos relacionados con el control de productos, insumos y pedidos. Este sistema busca centralizar la información, reducir errores humanos, y facilitar la toma de decisiones mediante una interfaz amigable y herramientas digitales modernas.
-        </p>
-        <p>
-          En la actualidad, muchas pequeñas y medianas empresas (PyMEs) enfrentan desafíos significativos en el manejo de sus inventarios, lo cual puede generar pérdidas económicas, sobrestock, desabastecimiento o fallas en la atención al cliente. Con este proyecto, se propone una solución eficiente, intuitiva y escalable que permita mejorar sustancialmente dichos procesos.
-        </p>
-        <p>
-          El presente proyecto hace parte del desarrollo formativo en el marco del programa Análisis y Desarrollo de Software del SENA, y su objetivo principal es aplicar buenas prácticas de ingeniería de software en un caso real de automatización de procesos empresariales.
-        </p>
+      <h2 class="section-title">Análisis de Costos</h2>
+
+      <h3>Costos de Hardware</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Elemento</th>
+              <th>Cantidad</th>
+              <th>Costo Unitario</th>
+              <th>Costo Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Computador</td><td>2</td><td>$2.000.000</td><td>$4.000.000</td></tr>
+            <tr><td>Servidor</td><td>1</td><td>$5.000.000</td><td>$5.000.000</td></tr>
+            <tr><td>Switch de red</td><td>1</td><td>$500.000</td><td>$500.000</td></tr>
+            <tr><td><strong>Total Hardware</strong></td><td></td><td></td><td><strong>$9.500.000</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Costos de Software</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Software</th>
+              <th>Tipo</th>
+              <th>Licencia/Costo</th>
+              <th>Periodo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sistema operativo</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
+            <tr><td>Base de datos (MySQL)</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
+            <tr><td>VSCode</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
+            <tr><td>Framework React</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
+            <tr><td><strong>Total Software</strong></td><td></td><td></td><td><strong>$0</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:2rem;">Gráficos Comparativos</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:2rem;">
+        <canvas id="graficoCostos" width="400" height="300"></canvas>
+        <canvas id="graficoHardware" width="400" height="300"></canvas>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Jeisson Smith Galvis Tello - Todos los derechos reservados</p>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello - Todos los derechos reservados</p>
   </footer>
 
+  <script>
+    // Gráfico Circular Comparativo
+    const ctx1 = document.getElementById('graficoCostos');
+    new Chart(ctx1, {
+      type: 'pie',
+      data: {
+        labels: ['Hardware', 'Software'],
+        datasets: [{
+          label: 'Costo Total',
+          data: [9500000, 0],
+          backgroundColor: ['#0a58ca', '#ffc107'],
+        }]
+      }
+    });
+
+    // Gráfico de Barras de Hardware
+    const ctx2 = document.getElementById('graficoHardware');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Computador', 'Servidor', 'Switch de red'],
+        datasets: [{
+          label: 'Costo Total',
+          data: [4000000, 5000000, 500000],
+          backgroundColor: '#0a58ca'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
