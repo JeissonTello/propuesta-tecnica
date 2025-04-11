@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ficha Técnica - Propuesta Técnica SGI</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -15,7 +16,7 @@
         <a href="index.html">Inicio</a>
         <a href="analisis.html">Análisis</a>
         <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha Técnica</a>
+        <a href="ficha.html" class="active">Ficha Técnica</a>
         <a href="modelo.html">Modelo Técnico</a>
         <a href="propuesta.html">Propuesta</a>
       </nav>
@@ -30,20 +31,40 @@
 
     <section class="content">
       <h3>Características Técnicas</h3>
-      <ul>
-        <li><strong>Backend:</strong> Node.js</li>
-        <li><strong>Frontend:</strong> React</li>
-        <li><strong>Base de Datos:</strong> MySQL</li>
-        <li><strong>Arquitectura:</strong> MVC</li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Backend</strong></td>
+            <td>Node.js, para el desarrollo del servidor y la lógica de negocio.</td>
+          </tr>
+          <tr>
+            <td><strong>Frontend</strong></td>
+            <td>React, para una interfaz de usuario dinámica y moderna.</td>
+          </tr>
+          <tr>
+            <td><strong>Base de Datos</strong></td>
+            <td>MySQL, para la gestión de datos relacionales y consultas eficientes.</td>
+          </tr>
+          <tr>
+            <td><strong>Arquitectura</strong></td>
+            <td>Modelo Vista-Controlador (MVC) para mantener una estructura modular.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+    <div class="footer-container">
+      <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+    </div>
   </footer>
 </body>
 </html>
 
-</body>
-</html>
