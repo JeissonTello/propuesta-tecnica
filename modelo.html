@@ -1,54 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modelo Técnico - Propuesta Técnica SGI</title>
+  <title>Modelo de Desarrollo - SGI</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="header-container">
-      <h1>Sistema de Gestión de Inventarios (SGI)</h1>
-      <p class="subtitle">Modelo Técnico</p>
+      <h1>Modelo de Desarrollo</h1>
+      <p class="subtitle">Sistema de Gestión de Inventarios (SGI)</p>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="analisis.html">Análisis</a>
         <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha Técnica</a>
-        <a href="modelo.html" class="active">Modelo Técnico</a>
+        <a href="ficha.html">Ficha</a>
         <a href="propuesta.html">Propuesta</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="analisis.html">Análisis</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Modelo Técnico del SGI</h2>
-      <p>Aquí se describe el modelo técnico que representa la arquitectura del sistema, los procesos principales y la estructura de datos.</p>
+    <section class="card">
+      <h2>Modelo de Desarrollo Adoptado</h2>
+      <p>Para el desarrollo del Sistema de Gestión de Inventarios (SGI), se adopta una metodología ágil, específicamente <strong>Scrum</strong>. Esta metodología permite una mejor adaptación a los cambios y una entrega incremental del sistema, asegurando una evolución constante basada en la retroalimentación del cliente.</p>
     </section>
 
-    <section class="content">
-      <h3>Diagrama de Clases</h3>
-      <div class="diagram-container">
-        <img src="assets/modelo_clases.png" alt="Diagrama de Clases del Sistema" class="model-img">
-      </div>
-
-      <h3>Diagrama de Actividades</h3>
-      <div class="diagram-container">
-        <img src="assets/modelo_actividad.png" alt="Diagrama de Actividades del Sistema" class="model-img">
-      </div>
+    <section class="card">
+      <h2>Fases del Proyecto</h2>
+      <ul>
+        <li><strong>Inicio:</strong> Recolección de requerimientos, definición de alcance y recursos.</li>
+        <li><strong>Planificación:</strong> Estimación de tareas, definición del backlog y planificación de sprints.</li>
+        <li><strong>Desarrollo:</strong> Implementación iterativa de funcionalidades mediante sprints.</li>
+        <li><strong>Pruebas:</strong> Validación del sistema, pruebas unitarias, funcionales y de integración.</li>
+        <li><strong>Entrega:</strong> Presentación final del sistema, documentación y retroalimentación.</li>
+      </ul>
     </section>
+
+    <section class="card">
+      <h2>Arquitectura del Sistema</h2>
+      <p>El sistema SGI se desarrollará utilizando una arquitectura cliente-servidor con las siguientes tecnologías:</p>
+      <ul>
+        <li><strong>Frontend:</strong> React.js</li>
+        <li><strong>Backend:</strong> Node.js + Express</li>
+        <li><strong>Base de datos:</strong> PostgreSQL o MySQL</li>
+        <li><strong>APIs:</strong> RESTful para la comunicación entre frontend y backend</li>
+      </ul>
+    </section>
+
+    <div class="section-links">
+      <a href="analisis.html" class="btn">➡️ Siguiente: Análisis</a>
+    </div>
   </main>
 
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
-    </div>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
   </footer>
 </body>
 </html>
-
-
