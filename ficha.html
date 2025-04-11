@@ -3,60 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ficha Técnica del Proyecto</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Ficha Técnica</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <style>
+    /* Estilos específicos de ficha */
+    .tech-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .tech-table th,
+    .tech-table td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    .tech-table th {
+      background-color: #0a58ca;
+      color: #fff;
+      text-align: left;
+    }
+
+    .requirements {
+      margin-bottom: 3rem;
+    }
+
+    .requirements h3 {
+      margin-bottom: 1rem;
+      color: #0a58ca;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="header">
-    <div class="logo">Sistema de Gestión de Inventarios</div>
-    <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="contexto.html">Contexto</a>
-      <a href="analisis.html">Análisis</a>
-      <a href="modelo.html">Modelo</a>
-      <a href="ficha.html" class="active">Ficha</a>
-      <a href="propuesta.html">Propuesta</a>
-    </nav>
+    <div class="container">
+      <div class="logo">
+        <h1>SGI - Sistema de Gestión de Inventarios</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="propuesta.html">Propuesta</a>
+        <a href="analisis.html">Análisis</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="ficha.html" class="active">Ficha</a>
+        <a href="modelo.html">Modelo</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- CONTENIDO -->
   <main class="container">
-    <section class="cards-section">
-      <h2 class="section-title">Ficha Técnica del Proyecto</h2>
+    <h2 class="section-title">Ficha Técnica del Proyecto</h2>
 
-      <div class="card">
-        <ul class="styled-list">
-          <li><strong>Nombre del Proyecto:</strong> Sistema de Gestión de Inventarios (SGI)</li>
-          <li><strong>Tipo de Proyecto:</strong> Desarrollo de Software</li>
-          <li><strong>Modalidad:</strong> Proyecto Formativo</li>
-          <li><strong>Aprendiz:</strong> Jeisson Smith Galvis Tello</li>
-          <li><strong>Programa:</strong> Análisis y Desarrollo de Software</li>
-          <li><strong>Ficha:</strong> 220501094</li>
-          <li><strong>Centro de Formación:</strong> SENA</li>
-          <li><strong>Fecha de Entrega:</strong> Abril 2025</li>
-        </ul>
+    <!-- Tabla técnica -->
+    <table class="tech-table">
+      <tr>
+        <th>Ítem</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Nombre del sistema</td>
+        <td>Sistema de Gestión de Inventarios (SGI)</td>
+      </tr>
+      <tr>
+        <td>Versión</td>
+        <td>1.0</td>
+      </tr>
+    </table>
+
+    <!-- Requisitos Funcionales -->
+    <section class="requirements">
+      <h3><i class="bi bi-check-circle-fill"></i> Requisitos Funcionales</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>RF1 - Registrar productos</h4>
+          <p>Permitir registrar nuevos productos al inventario.</p>
+        </div>
+        <div class="card">
+          <h4>RF2 - Editar productos</h4>
+          <p>Modificar la información de productos existentes.</p>
+        </div>
+        <div class="card">
+          <h4>RF3 - Eliminar productos</h4>
+          <p>Eliminar productos del sistema.</p>
+        </div>
+        <div class="card">
+          <h4>RF4 - Registrar pedidos</h4>
+          <p>Permitir ingresar pedidos asociados a productos.</p>
+        </div>
+        <div class="card">
+          <h4>RF5 - Generar reportes</h4>
+          <p>Crear reportes de inventario, movimientos y pedidos.</p>
+        </div>
+        <div class="card">
+          <h4>RF6 - Gestión de usuarios</h4>
+          <p>Administrar roles y accesos para cada usuario.</p>
+        </div>
+        <div class="card">
+          <h4>RF7 - Autenticación</h4>
+          <p>Permitir ingreso con usuario y contraseña.</p>
+        </div>
+        <div class="card">
+          <h4>RF8 - Control de stock</h4>
+          <p>Notificar bajo nivel de inventario.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Resumen del Proyecto</h3>
-        <p>
-          El proyecto busca desarrollar un sistema web que permita gestionar productos, controlar inventarios, generar reportes y optimizar procesos logísticos. 
-          Se utilizarán tecnologías modernas para garantizar escalabilidad, rendimiento y seguridad.
-        </p>
+    <!-- Requisitos No Funcionales -->
+    <section class="requirements">
+      <h3><i class="bi bi-sliders2-vertical"></i> Requisitos No Funcionales</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>RNF1 - Seguridad</h4>
+          <p>Proteger la información mediante autenticación y cifrado.</p>
+        </div>
+        <div class="card">
+          <h4>RNF2 - Usabilidad</h4>
+          <p>Interfaz amigable, simple y fácil de usar.</p>
+        </div>
+        <div class="card">
+          <h4>RNF3 - Rendimiento</h4>
+          <p>Respuestas rápidas en operaciones frecuentes.</p>
+        </div>
+        <div class="card">
+          <h4>RNF4 - Escalabilidad</h4>
+          <p>Capaz de crecer en número de usuarios o productos.</p>
+        </div>
+        <div class="card">
+          <h4>RNF5 - Compatibilidad</h4>
+          <p>Funciona en diferentes navegadores y dispositivos.</p>
+        </div>
       </div>
-
-      <div class="card highlight">
-        <h3>Objetivo General</h3>
-        <p>
-          Desarrollar un sistema web de gestión de inventarios que automatice tareas administrativas, mejore el control de existencias y facilite la toma de decisiones en tiempo real.
-        </p>
-      </div>
-
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+    <p>&copy; 2025 Sistema de Gestión de Inventarios | Todos los derechos reservados</p>
   </footer>
 
 </body>
