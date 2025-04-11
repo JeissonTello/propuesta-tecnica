@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--secondary-color);
+  color: #var(--text-color);
   margin: 0;
   padding: 0;
 }
