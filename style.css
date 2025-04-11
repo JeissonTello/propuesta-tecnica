@@ -21,9 +21,10 @@ a:hover {
 }
 
 header {
-  background-color: #333;
+  background-color: #1E88E5; /* Azul para el encabezado */
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -41,27 +42,31 @@ nav {
 
 nav a {
   color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-nav a.active {
-  color: #1E88E5; /* Azul vibrante */
+nav a:hover {
+  color: #f4f4f4;
+  transform: scale(1.05);
 }
 
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
-  padding: 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .content ul {
@@ -72,20 +77,97 @@ section {
 .content table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .content table th, .content table td {
-  padding: 10px;
+  padding: 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+}
+
+.content table th {
+  background-color: #1E88E5;
+  color: #fff;
+}
+
+.content table td {
+  background-color: #fff;
 }
 
 .model-img {
   max-width: 100%;
   height: auto;
   margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .diagram-container {
   text-align: center;
 }
+
+.section-links .btn {
+  padding: 12px 30px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background-color: #1E88E5;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-links .btn:hover {
+  background-color: #1565C0;
+  transform: scale(1.1);
+}
+
+.hero {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-box li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-box li:last-child {
+  border-bottom: none;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
