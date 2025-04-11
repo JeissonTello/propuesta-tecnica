@@ -227,3 +227,22 @@ a:hover, .btn:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+  header, footer {
+    text-align: center;
+  }
+
+  .header-container h1 {
+    font-size: 1.8em;
+  }
+
+  .section-links {
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+  }
+}
