@@ -211,4 +211,19 @@ a:hover, .btn:hover {
   color: white;
 }
 
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
 
