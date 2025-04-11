@@ -8,8 +8,8 @@
   <meta name="keywords" content="Sistema de Gestión de Inventarios, SGI, Propuesta Técnica, SENA, Proyecto, Tecnología" />
   <title>Propuesta Técnica SGI</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Icono de la página -->
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.1/dist/gsap.min.js"></script>
 </head>
 <body>
   <header class="main-header">
@@ -28,16 +28,19 @@
   </header>
 
   <main>
+    <!-- Sección hero con efecto parallax -->
     <section class="hero-section">
       <div class="hero-text">
-        <h2>Bienvenido a la Propuesta Técnica del SGI</h2>
-        <p>Este sitio expone la planeación técnica y económica para el desarrollo del Sistema de Gestión de Inventarios, orientado a optimizar procesos internos, controlar productos y facilitar la toma de decisiones empresariales.</p>
+        <h2 class="animated-title">Bienvenido a la Propuesta Técnica del SGI</h2>
+        <p class="animated-description">Este sitio expone la planeación técnica y económica para el desarrollo del Sistema de Gestión de Inventarios, orientado a optimizar procesos internos, controlar productos y facilitar la toma de decisiones empresariales.</p>
       </div>
-      <img src="assets/img/banner.jpg" alt="Imagen de banner del proyecto" class="hero-banner" />
+      <div class="hero-banner-container">
+        <img src="assets/img/banner.jpg" alt="Imagen de banner del proyecto" class="hero-banner" />
+      </div>
     </section>
 
     <section class="info-box">
-      <h3>Datos del Aprendiz</h3>
+      <h3 class="animated-title">Datos del Aprendiz</h3>
       <ul class="data-list">
         <li><strong>Nombre:</strong> Jeisson Smith Galvis Tello</li>
         <li><strong>Programa:</strong> Análisis y Desarrollo de Software</li>
@@ -66,5 +69,7 @@
       <a href="https://github.com/jeisson-smith" target="_blank" class="social-icon">GitHub</a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
