@@ -26,11 +26,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 0.5rem;
 }
@@ -63,15 +64,18 @@ body {
   padding: 2rem 0;
   background-color: #e7f0ff;
   gap: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content {
   flex: 1 1 400px;
+  text-align: left;
 }
 
 .hero-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #0a58ca;
 }
 
 .hero-content p {
@@ -81,6 +85,7 @@ body {
 .hero-image img {
   max-width: 100%;
   border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
@@ -152,25 +157,30 @@ body {
   background-color: #0a58ca;
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1rem 0;
 }
 
-/* SCROLL TO TOP */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2rem;
+  right: 2rem;
   background-color: #0a58ca;
   color: white;
-  border: none;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .scroll-to-top:hover {
-  background-color: #084298;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
