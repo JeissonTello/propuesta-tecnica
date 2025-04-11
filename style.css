@@ -1,4 +1,11 @@
 /* General */
+:root {
+  --primary-color: #1E88E5;
+  --secondary-color: #F4F4F4;
+  --text-color: #333333;
+  --button-hover: #1565C0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
