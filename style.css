@@ -188,3 +188,27 @@ section {
   margin: 0 auto;
 }
 
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section {
+  animation: fadeIn 1s ease-out;
+}
+
+a, .btn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover, .btn:hover {
+  background-color: var(--button-hover);
+  color: white;
+}
+
+
