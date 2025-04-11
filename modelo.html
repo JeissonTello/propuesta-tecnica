@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Modelo Técnico - Propuesta Técnica SGI</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -16,7 +17,7 @@
         <a href="analisis.html">Análisis</a>
         <a href="contexto.html">Contexto</a>
         <a href="ficha.html">Ficha Técnica</a>
-        <a href="modelo.html">Modelo Técnico</a>
+        <a href="modelo.html" class="active">Modelo Técnico</a>
         <a href="propuesta.html">Propuesta</a>
       </nav>
     </div>
@@ -30,16 +31,23 @@
 
     <section class="content">
       <h3>Diagrama de Clases</h3>
-      <img src="assets/modelo_clases.png" alt="Diagrama de Clases del Sistema" class="model-img">
+      <div class="diagram-container">
+        <img src="assets/modelo_clases.png" alt="Diagrama de Clases del Sistema" class="model-img">
+      </div>
 
       <h3>Diagrama de Actividades</h3>
-      <img src="assets/modelo_actividad.png" alt="Diagrama de Actividades del Sistema" class="model-img">
+      <div class="diagram-container">
+        <img src="assets/modelo_actividad.png" alt="Diagrama de Actividades del Sistema" class="model-img">
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+    <div class="footer-container">
+      <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+    </div>
   </footer>
 </body>
 </html>
+
 
