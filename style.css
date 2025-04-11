@@ -167,27 +167,81 @@ body {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 1.1em;
-  background-color: #003366;
+  font-size: 16px;
+  background-color: #0066cc;
   color: white;
+  border: none;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
   margin: 10px 0;
+  cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #ff8c00;
+  background-color: #005bb5;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
-  background-color: #003366;
+  background-color: #1a73e8;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #ff8c00;
+  background-color: #1758b4;
 }
+
+/* Tarjetas con efectos hover */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #777;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card-link:hover {
+  background-color: #005bb5;
+}
+
 
 /* Enlaces en pie de página */
 .main-footer {
