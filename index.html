@@ -1,73 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio | Propuesta Técnica SGI</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta Técnica - SGI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container">
-      <h1 class="logo">Sistema de Gestión de Inventarios</h1>
+      <div class="logo">
+        <h1>SGI - Sistema de Gestión de Inventarios</h1>
+      </div>
       <nav class="nav">
         <a href="index.html" class="active">Inicio</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="analisis.html">Análisis</a>
-        <a href="modelo.html">Modelo</a>
-        <a href="ficha.html">Ficha Técnica</a>
         <a href="propuesta.html">Propuesta</a>
+        <a href="analisis.html">Análisis</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="ficha.html">Ficha</a>
+        <a href="modelo.html">Modelo</a>
       </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Bienvenido a la propuesta del SGI</h2>
-      <p>Explora cómo este proyecto transformará la gestión de inventarios mediante tecnología de punta y un diseño funcional y eficiente.</p>
-      <a href="propuesta.html" class="btn-primary">Ver Propuesta Completa</a>
+      <h2>Bienvenido a la Propuesta Técnica</h2>
+      <p>Optimización de procesos con el Sistema de Gestión de Inventarios (SGI).</p>
+      <a href="#propuesta" class="btn-primary">Ver Propuesta</a>
     </div>
     <div class="hero-image">
-      <img src="assets/img/banner.jpg" alt="Banner del SGI" />
+      <img src="https://via.placeholder.com/600x400" alt="Imagen de Propuesta">
     </div>
   </section>
 
+  <!-- GRÁFICOS -->
+  <section class="charts">
+    <h3>Gráficos de Progreso</h3>
+    <canvas id="myChart" width="400" height="200"></canvas>
+  </section>
+
+  <!-- CARDS -->
   <section class="cards-section">
-    <h2 class="section-title">Explora las secciones</h2>
+    <h3 class="section-title">Módulos del SGI</h3>
     <div class="cards">
       <div class="card">
-        <h3>📌 Contexto</h3>
-        <p>Conoce el entorno, necesidades y justificación del proyecto.</p>
-        <a href="contexto.html" class="btn-card">Ir a Contexto</a>
+        <h3>Gestión de Productos</h3>
+        <p>Mejora la visibilidad y control de los productos en inventario.</p>
+        <a href="#" class="btn-card">Ver Detalles</a>
       </div>
       <div class="card">
-        <h3>📊 Análisis</h3>
-        <p>Descubre cómo analizamos las necesidades y requerimientos del sistema.</p>
-        <a href="analisis.html" class="btn-card">Ir al Análisis</a>
+        <h3>Gestión de Pedidos</h3>
+        <p>Automatiza el proceso de pedidos y mejora la eficiencia.</p>
+        <a href="#" class="btn-card">Ver Detalles</a>
       </div>
       <div class="card">
-        <h3>🧠 Modelo</h3>
-        <p>Visualiza el modelo lógico del sistema y su estructura técnica.</p>
-        <a href="modelo.html" class="btn-card">Ir al Modelo</a>
-      </div>
-      <div class="card">
-        <h3>🧾 Ficha Técnica</h3>
-        <p>Consulta los detalles técnicos, tecnologías y herramientas utilizadas.</p>
-        <a href="ficha.html" class="btn-card">Ir a la Ficha</a>
-      </div>
-      <div class="card">
-        <h3>✅ Propuesta</h3>
-        <p>Lee la propuesta completa con costos, licencias y conclusiones.</p>
-        <a href="propuesta.html" class="btn-card">Ir a la Propuesta</a>
+        <h3>Gestión de Usuarios</h3>
+        <p>Administra los permisos y roles de los usuarios de manera eficiente.</p>
+        <a href="#" class="btn-card">Ver Detalles</a>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Jeisson Smith Galvis Tello | SENA ADSO | Proyecto Formativo</p>
-    </div>
+    <p>&copy; 2025 Sistema de Gestión de Inventarios | Todos los derechos reservados</p>
   </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Gráfico de ejemplo con Chart.js
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+        datasets: [{
+          label: '# de Ventas',
+          data: [12, 19, 3, 5],
+          backgroundColor: 'rgba(0, 123, 255, 0.2)',
+          borderColor: 'rgba(0, 123, 255, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Función Scroll to Top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
