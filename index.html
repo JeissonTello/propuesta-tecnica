@@ -6,6 +6,7 @@
   <title>Propuesta Técnica - SGI</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
 </head>
 <body>
 
@@ -97,6 +98,13 @@
         }
       }
     });
+
+    // Animaciones con GSAP
+    gsap.from(".header", { opacity: 0, duration: 1, y: -50 });
+    gsap.from(".hero-content", { opacity: 0, duration: 1, delay: 0.5, x: -50 });
+    gsap.from(".hero-image", { opacity: 0, duration: 1, delay: 1, x: 50 });
+    gsap.from(".card", { opacity: 0, duration: 1, stagger: 0.3, y: 50 });
+    gsap.from(".scroll-to-top", { opacity: 0, duration: 1, delay: 1.5, scale: 0.5 });
 
     // Función Scroll to Top
     function scrollToTop() {
