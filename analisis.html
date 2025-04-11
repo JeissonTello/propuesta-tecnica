@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Análisis de Costos</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Análisis de Costos - Sistema de Gestión de Inventarios</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -14,96 +14,121 @@
       <nav class="nav">
         <a href="index.html">Inicio</a>
         <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha Técnica</a>
-        <a href="propuesta.html">Propuesta</a>
-        <a href="modelo.html">Modelo</a>
         <a href="analisis.html" class="active">Análisis</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="propuesta.html">Propuesta</a>
+        <a href="ficha.html">Ficha Técnica</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="cards-section">
-      <h2 class="section-title">Análisis de Costos</h2>
+      <h2 class="section-title">Análisis de Costos de Hardware y Software</h2>
 
+      <!-- Tabla de Costos de Hardware -->
       <h3>Costos de Hardware</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Elemento</th>
-              <th>Cantidad</th>
-              <th>Costo Unitario</th>
-              <th>Costo Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Computador</td><td>2</td><td>$2.000.000</td><td>$4.000.000</td></tr>
-            <tr><td>Servidor</td><td>1</td><td>$5.000.000</td><td>$5.000.000</td></tr>
-            <tr><td>Switch de red</td><td>1</td><td>$500.000</td><td>$500.000</td></tr>
-            <tr><td><strong>Total Hardware</strong></td><td></td><td></td><td><strong>$9.500.000</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="card">
+        <tr>
+          <th>Componente</th>
+          <th>Proveedor</th>
+          <th>Costo (COP)</th>
+        </tr>
+        <tr>
+          <td>Tarjeta Madre</td>
+          <td>PC System</td>
+          <td>978.000</td>
+        </tr>
+        <tr>
+          <td>Procesador Intel Core i5</td>
+          <td>PC System</td>
+          <td>927.000</td>
+        </tr>
+        <tr>
+          <td>Tarjeta Gráfica RTX 3060</td>
+          <td>PC System</td>
+          <td>3.339.000</td>
+        </tr>
+        <tr>
+          <td>Memoria RAM 16 GB</td>
+          <td>PC System</td>
+          <td>442.000</td>
+        </tr>
+        <tr>
+          <td>Fuente de Poder</td>
+          <td>PC System</td>
+          <td>703.000</td>
+        </tr>
+        <tr>
+          <td>Disco Duro 1 TB</td>
+          <td>PC System</td>
+          <td>393.000</td>
+        </tr>
+        <tr>
+          <td>Gabinete con Buen Flujo de Aire</td>
+          <td>PC System</td>
+          <td>918.000</td>
+        </tr>
+      </table>
 
+      <!-- Tabla de Costos de Software -->
       <h3>Costos de Software</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Software</th>
-              <th>Tipo</th>
-              <th>Licencia/Costo</th>
-              <th>Periodo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Sistema operativo</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
-            <tr><td>Base de datos (MySQL)</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
-            <tr><td>VSCode</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
-            <tr><td>Framework React</td><td>Libre</td><td>$0</td><td>N/A</td></tr>
-            <tr><td><strong>Total Software</strong></td><td></td><td></td><td><strong>$0</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="card">
+        <tr>
+          <th>Software</th>
+          <th>Proveedor</th>
+          <th>Costo (COP)</th>
+        </tr>
+        <tr>
+          <td>Licencia Windows 10 Pro</td>
+          <td>La tienda del software</td>
+          <td>76.000</td>
+        </tr>
+      </table>
 
-      <h3 style="margin-top:2rem;">Gráficos Comparativos</h3>
-      <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:2rem;">
-        <canvas id="graficoCostos" width="400" height="300"></canvas>
-        <canvas id="graficoHardware" width="400" height="300"></canvas>
+      <!-- Gráfico de Barras de Costos -->
+      <h3>Distribución de Costos por Componente</h3>
+      <div class="chart-container">
+        <canvas id="costosChart"></canvas>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Jeisson Smith Galvis Tello - Todos los derechos reservados</p>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello. Todos los derechos reservados.</p>
   </footer>
 
   <script>
-    // Gráfico Circular Comparativo
-    const ctx1 = document.getElementById('graficoCostos');
-    new Chart(ctx1, {
-      type: 'pie',
-      data: {
-        labels: ['Hardware', 'Software'],
-        datasets: [{
-          label: 'Costo Total',
-          data: [9500000, 0],
-          backgroundColor: ['#0a58ca', '#ffc107'],
-        }]
-      }
-    });
-
-    // Gráfico de Barras de Hardware
-    const ctx2 = document.getElementById('graficoHardware');
-    new Chart(ctx2, {
+    // Datos para el gráfico de barras
+    const ctx = document.getElementById('costosChart').getContext('2d');
+    const costosChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Computador', 'Servidor', 'Switch de red'],
+        labels: [
+          'Tarjeta Madre',
+          'Procesador Intel Core i5',
+          'Tarjeta Gráfica RTX 3060',
+          'Memoria RAM 16 GB',
+          'Fuente de Poder',
+          'Disco Duro 1 TB',
+          'Gabinete con Buen Flujo de Aire',
+          'Licencia Windows 10 Pro'
+        ],
         datasets: [{
-          label: 'Costo Total',
-          data: [4000000, 5000000, 500000],
-          backgroundColor: '#0a58ca'
+          label: 'Costo (COP)',
+          data: [
+            978000,
+            927000,
+            3339000,
+            442000,
+            703000,
+            393000,
+            918000,
+            76000
+          ],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
         }]
       },
       options: {
