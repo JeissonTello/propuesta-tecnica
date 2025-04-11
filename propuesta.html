@@ -3,76 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Propuesta Técnica y Económica</title>
+  <title>Propuesta - Sistema de Gestión de Inventarios</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="header">
-    <div class="logo">Sistema de Gestión de Inventarios</div>
-    <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="contexto.html">Contexto</a>
-      <a href="analisis.html">Análisis</a>
-      <a href="modelo.html">Modelo</a>
-      <a href="ficha.html">Ficha</a>
-      <a href="propuesta.html" class="active">Propuesta</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Sistema de Gestión de Inventarios</h1>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="analisis.html">Análisis</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="propuesta.html" class="active">Propuesta</a>
+        <a href="ficha.html">Ficha Técnica</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
     <section class="cards-section">
       <h2 class="section-title">Propuesta Técnica y Económica</h2>
 
-      <div class="card">
-        <h3>Introducción al Proyecto</h3>
-        <p>
-          La propuesta presentada tiene como objetivo la creación de un sistema eficiente y escalable que facilite la gestión de inventarios de manera automatizada. A través de la integración de tecnologías de vanguardia y una estructura modular, el sistema busca optimizar los procesos internos de control de productos y generar reportes para tomar decisiones estratégicas con mayor rapidez.
-        </p>
-      </div>
+      <!-- Tabla de Costos Fijos y Variables -->
+      <h3>Costos Fijos</h3>
+      <table class="card">
+        <tr>
+          <th>Concepto</th>
+          <th>Descripción</th>
+          <th>Costo Aproximado (COP)</th>
+          <th>Tiempo Estimado (días)</th>
+        </tr>
+        <tr>
+          <td>Desarrollo de Software</td>
+          <td>Desarrollo de aplicación web con módulos de ventas, facturación, inventario y reportes.</td>
+          <td>$20.000.000</td>
+          <td>125</td>
+        </tr>
+        <tr>
+          <td>Investigación y Análisis</td>
+          <td>Análisis de requerimientos, estudio de mercado, arquitectura de software.</td>
+          <td>$2.500.000</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Diseño UX/UI</td>
+          <td>Creación de interfaces atractivas y experiencia de usuario intuitiva.</td>
+          <td>$2.000.000</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Base de Datos</td>
+          <td>Configuración y optimización de base de datos MySQL y/o PostgreSQL.</td>
+          <td>$3.000.000</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Infraestructura y Hosting</td>
+          <td>Uso de Apache, con opción de migración futura a AWS, Azure o Google Cloud.</td>
+          <td>$2.500.000</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>Licencias de Software</td>
+          <td>Uso de software Open Source: Linux, LibreOffice, MySQL/PostgreSQL, VS Code, Django, React.js, Pandas.</td>
+          <td>$1.500.000</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>Hardware</td>
+          <td>Servidores y equipos necesarios para el desarrollo.</td>
+          <td>$4.500.000</td>
+          <td>N/A</td>
+        </tr>
+      </table>
 
-      <div class="card">
-        <h3>Objetivos del Proyecto</h3>
-        <ul class="styled-list">
-          <li><strong>Optimizar la gestión de inventarios:</strong> Automatizando la actualización y control de existencias en tiempo real.</li>
-          <li><strong>Mejorar la trazabilidad:</strong> Ofreciendo un seguimiento detallado de movimientos de productos.</li>
-          <li><strong>Generar reportes:</strong> Proporcionando informes estadísticos para facilitar la toma de decisiones empresariales.</li>
-        </ul>
-      </div>
+      <h3>Costos Variables</h3>
+      <table class="card">
+        <tr>
+          <th>Concepto</th>
+          <th>Descripción</th>
+          <th>Costo Aproximado (COP)</th>
+          <th>Tiempo Estimado (días)</th>
+        </tr>
+        <tr>
+          <td>Imprevistos</td>
+          <td>Mantenimiento y soporte no anticipado.</td>
+          <td>$5.000.000</td>
+          <td>N/A</td>
+        </tr>
+      </table>
 
-      <div class="card">
-        <h3>Presupuesto Estimado</h3>
-        <p>
-          La estimación de costos para el desarrollo e implementación del Sistema de Gestión de Inventarios (SGI) tiene en cuenta varios factores, incluyendo las horas de trabajo, las licencias de software necesarias y la infraestructura técnica requerida. A continuación, se presentan los costos aproximados para el proyecto:
-        </p>
-        <ul class="styled-list">
-          <li><strong>Desarrollo Backend:</strong> $5000</li>
-          <li><strong>Desarrollo Frontend:</strong> $4000</li>
-          <li><strong>Licencias de Software:</strong> $1000</li>
-          <li><strong>Infraestructura y Servidores:</strong> $1500</li>
-          <li><strong>Pruebas y Mantenimiento:</strong> $2000</li>
-        </ul>
-      </div>
-
-      <div class="card highlight">
-        <h3>Tiempo Estimado</h3>
-        <p>
-          El proyecto se estima que tomará aproximadamente 6 meses para su desarrollo completo, distribuidos en las siguientes fases:
-        </p>
-        <ul class="styled-list">
-          <li><strong>Fase 1:</strong> Análisis de requisitos y diseño - 1 mes.</li>
-          <li><strong>Fase 2:</strong> Desarrollo del backend y frontend - 3 meses.</li>
-          <li><strong>Fase 3:</strong> Pruebas y ajustes - 1 mes.</li>
-          <li><strong>Fase 4:</strong> Implementación y puesta en marcha - 1 mes.</li>
-        </ul>
-      </div>
-
+      <h3>Total del Proyecto</h3>
+      <table class="card">
+        <tr>
+          <th>Total del Proyecto</th>
+          <th>Costo Total Estimado (COP)</th>
+          <th>Tiempo Total Estimado (días)</th>
+        </tr>
+        <tr>
+          <td>Costo Total</td>
+          <td>$41.000.000</td>
+          <td>161</td>
+        </tr>
+      </table>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+    <p>&copy; 2025 Jeisson Smith Galvis Tello. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
