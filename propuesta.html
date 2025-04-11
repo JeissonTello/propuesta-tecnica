@@ -2,68 +2,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Propuesta Técnica - SGI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propuesta Técnica y Económica</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <h1>Propuesta Técnica y Económica</h1>
-      <p class="subtitle">Sistema de Gestión de Inventarios (SGI)</p>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="analisis.html">Análisis</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha</a>
-        <a href="modelo.html">Modelo</a>
-        <a href="propuesta.html">Propuesta</a>
-      </nav>
-    </div>
+
+  <header class="header">
+    <div class="logo">Sistema de Gestión de Inventarios</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="contexto.html">Contexto</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="modelo.html">Modelo</a>
+      <a href="ficha.html">Ficha</a>
+      <a href="propuesta.html" class="active">Propuesta</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="card">
-      <h2>Descripción General del Proyecto</h2>
-      <p>La propuesta técnica y económica para el desarrollo del Sistema de Gestión de Inventarios (SGI) tiene como objetivo mejorar el control de los productos y optimizar los procesos logísticos dentro de la empresa. Este sistema permitirá una gestión más eficiente de los recursos, una mayor visibilidad de las existencias y un control más riguroso sobre las compras y ventas de los productos.</p>
-      <p>El SGI estará diseñado para ser flexible, escalable y fácil de usar, adaptándose a las necesidades específicas de cada empresa.</p>
+  <main class="container">
+    <section class="cards-section">
+      <h2 class="section-title">Propuesta Técnica y Económica</h2>
+
+      <div class="card">
+        <h3>Introducción al Proyecto</h3>
+        <p>
+          La propuesta presentada tiene como objetivo la creación de un sistema eficiente y escalable que facilite la gestión de inventarios de manera automatizada. A través de la integración de tecnologías de vanguardia y una estructura modular, el sistema busca optimizar los procesos internos de control de productos y generar reportes para tomar decisiones estratégicas con mayor rapidez.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Objetivos del Proyecto</h3>
+        <ul class="styled-list">
+          <li><strong>Optimizar la gestión de inventarios:</strong> Automatizando la actualización y control de existencias en tiempo real.</li>
+          <li><strong>Mejorar la trazabilidad:</strong> Ofreciendo un seguimiento detallado de movimientos de productos.</li>
+          <li><strong>Generar reportes:</strong> Proporcionando informes estadísticos para facilitar la toma de decisiones empresariales.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Presupuesto Estimado</h3>
+        <p>
+          La estimación de costos para el desarrollo e implementación del Sistema de Gestión de Inventarios (SGI) tiene en cuenta varios factores, incluyendo las horas de trabajo, las licencias de software necesarias y la infraestructura técnica requerida. A continuación, se presentan los costos aproximados para el proyecto:
+        </p>
+        <ul class="styled-list">
+          <li><strong>Desarrollo Backend:</strong> $5000</li>
+          <li><strong>Desarrollo Frontend:</strong> $4000</li>
+          <li><strong>Licencias de Software:</strong> $1000</li>
+          <li><strong>Infraestructura y Servidores:</strong> $1500</li>
+          <li><strong>Pruebas y Mantenimiento:</strong> $2000</li>
+        </ul>
+      </div>
+
+      <div class="card highlight">
+        <h3>Tiempo Estimado</h3>
+        <p>
+          El proyecto se estima que tomará aproximadamente 6 meses para su desarrollo completo, distribuidos en las siguientes fases:
+        </p>
+        <ul class="styled-list">
+          <li><strong>Fase 1:</strong> Análisis de requisitos y diseño - 1 mes.</li>
+          <li><strong>Fase 2:</strong> Desarrollo del backend y frontend - 3 meses.</li>
+          <li><strong>Fase 3:</strong> Pruebas y ajustes - 1 mes.</li>
+          <li><strong>Fase 4:</strong> Implementación y puesta en marcha - 1 mes.</li>
+        </ul>
+      </div>
+
     </section>
+  </main>
 
-    <section class="card">
-      <h2>Alcance de la Propuesta</h2>
-      <p>La solución propuesta incluye los siguientes módulos y funcionalidades:</p>
-      <ul>
-        <li><strong>Gestión de Inventarios:</strong> Registro, seguimiento y control de productos.</li>
-        <li><strong>Gestión de Pedidos:</strong> Manejo de pedidos de clientes y proveedores.</li>
-        <li><strong>Reportes en Tiempo Real:</strong> Visualización de datos y métricas clave para la toma de decisiones.</li>
-        <li><strong>Control de Acceso:</strong> Autenticación de usuarios y gestión de permisos por roles.</li>
-        <li><strong>Integración con Plataformas de Terceros:</strong> Para sincronizar con otras aplicaciones y servicios.</li>
-      </ul>
-    </section>
+  <footer class="footer">
+    <p>© 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+  </footer>
 
-    <section class="card">
-      <h2>Estimación de Costos</h2>
-      <p>La implementación del SGI requiere una inversión que cubre el desarrollo, implementación, y mantenimiento del sistema, desglosados en los siguientes aspectos:</p>
-      <ul>
-        <li><strong>Desarrollo de software:</strong> $XX,XXX - Esto incluye la programación, pruebas y la puesta en producción del sistema.</li>
-        <li><strong>Infraestructura tecnológica:</strong> $X,XXX - Costo de servidores, bases de datos y otros recursos tecnológicos necesarios.</li>
-        <li><strong>Licenciamiento de herramientas:</strong> $X,XXX - Costo de licencias de software o plataformas utilizadas en el proyecto.</li>
-        <li><strong>Capacitación del personal:</strong> $X,XXX - Entrenamiento a usuarios finales y personal administrativo para el uso del sistema.</li>
-      </ul>
-      <p><strong>Total estimado:</strong> $XX,XXX</p>
-    </section>
-
-    <section class="card">
-      <h2>Plazos de Implementación</h2>
-      <p>La implementación del SGI se realizará en las siguientes fases:</p>
-      <ul>
-        <li><strong>Fase 1:</strong> Análisis y recolección de requisitos (2 semanas).</li>
-        <li><strong>Fase 2:</strong> Desarrollo y pruebas iniciales (4 semanas).</li>
-        <li><strong>Fase 3:</strong> Implementación y puesta en producción (2 semanas).</li>
-        <li><strong>Fase 4:</strong> Capacitación y soporte (1 semana).</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Beneficios
-
+</body>
+</html>
