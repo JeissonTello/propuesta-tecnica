@@ -253,3 +253,25 @@ a:hover, .btn:hover {
     margin-top: 10px;
   }
 }
+
+.hero {
+  position: relative;
+  height: 400px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: white;
+}
+
+.parallax {
+  background-image: url('assets/banner.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
