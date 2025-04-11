@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Propuesta técnica para el Sistema de Gestión de Inventarios (SGI) en la empresa, optimizando procesos, controlando productos y facilitando la toma de decisiones." />
-  <meta name="author" content="Jeisson Smith Galvis Tello" />
-  <meta name="keywords" content="Sistema de Gestión de Inventarios, SGI, Propuesta Técnica, SENA, Proyecto, Tecnología" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Propuesta Técnica SGI</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.1/dist/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="main-header">
@@ -17,56 +13,50 @@
       <h1 class="main-title">Sistema de Gestión de Inventarios (SGI)</h1>
       <p class="subtitle">Propuesta Técnica y Económica</p>
       <nav class="navbar">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="analisis.html" class="nav-link">Análisis</a>
-        <a href="contexto.html" class="nav-link">Contexto</a>
-        <a href="ficha.html" class="nav-link">Ficha</a>
-        <a href="modelo.html" class="nav-link">Modelo</a>
-        <a href="propuesta.html" class="nav-link">Propuesta</a>
+        <a href="about.html" class="nav-link">Introducción</a>
+        <a href="tecnologias.html" class="nav-link">Tecnologías</a>
+        <a href="licencias.html" class="nav-link">Licenciamiento</a>
+        <a href="costos.html" class="nav-link">Costos</a>
+        <a href="conclusion.html" class="nav-link">Conclusión</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Sección principal con diseño limpio y corporativo -->
-    <section class="hero-section">
+    <section class="hero-section section animate-on-scroll">
       <div class="hero-content">
-        <h2 class="hero-title">Bienvenido a la Propuesta Técnica del SGI</h2>
-        <p class="hero-description">Este sitio presenta el desarrollo detallado del Sistema de Gestión de Inventarios, que tiene como objetivo optimizar procesos, controlar productos y facilitar la toma de decisiones empresariales.</p>
+        <h2 class="hero-title">Bienvenido a la propuesta técnica del SGI</h2>
+        <p class="hero-description">Este sitio expone la planeación técnica y económica para el desarrollo del Sistema de Gestión de Inventarios, orientado a optimizar procesos internos, controlar productos y facilitar la toma de decisiones empresariales.</p>
       </div>
-      <div class="hero-banner-container">
-        <img src="assets/img/banner.jpg" alt="Imagen de banner del proyecto" class="hero-banner" />
-      </div>
+      <img src="assets/banner.jpg" alt="Banner del proyecto" class="hero-banner">
     </section>
 
-    <!-- Sección de tarjetas interactivas -->
-    <section class="card-container">
+    <section class="card-container section animate-on-scroll">
       <div class="card">
-        <img src="assets/img/technologies-icon.png" alt="Tecnologías" class="card-icon">
-        <h3 class="card-title">Tecnologías Utilizadas</h3>
-        <p class="card-description">Explora las herramientas y tecnologías que empleamos para desarrollar este proyecto, desde Node.js hasta React y bases de datos SQL.</p>
+        <img src="assets/icon1.png" alt="Icono 1" class="card-icon">
+        <h3 class="card-title">Introducción</h3>
+        <p class="card-description">Conoce el contexto y objetivos del SGI, y su importancia en el proceso de gestión de inventarios.</p>
+        <a href="about.html" class="card-link">Leer más</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/icon2.png" alt="Icono 2" class="card-icon">
+        <h3 class="card-title">Tecnologías</h3>
+        <p class="card-description">Explora las tecnologías utilizadas en el desarrollo del SGI, desde el backend hasta la interfaz.</p>
         <a href="tecnologias.html" class="card-link">Leer más</a>
       </div>
 
       <div class="card">
-        <img src="assets/img/licenses-icon.png" alt="Licencias" class="card-icon">
-        <h3 class="card-title">Licenciamiento</h3>
-        <p class="card-description">Conoce las licencias necesarias para el desarrollo del SGI, y cómo garantizamos el cumplimiento de las normativas legales.</p>
+        <img src="assets/icon3.png" alt="Icono 3" class="card-icon">
+        <h3 class="card-title">Licencias</h3>
+        <p class="card-description">Infórmate sobre el licenciamiento del software y su relación con el desarrollo del SGI.</p>
         <a href="licencias.html" class="card-link">Leer más</a>
-      </div>
-
-      <div class="card">
-        <img src="assets/img/costs-icon.png" alt="Costos" class="card-icon">
-        <h3 class="card-title">Estimación de Costos</h3>
-        <p class="card-description">Accede a la estimación detallada de los costos de desarrollo del SGI, considerando cada fase del proyecto.</p>
-        <a href="costos.html" class="card-link">Leer más</a>
       </div>
     </section>
 
-    <!-- Sección con datos del aprendiz -->
-    <section class="info-box">
-      <h3 class="section-title">Datos del Aprendiz</h3>
-      <ul class="data-list">
+    <section class="info-box section animate-on-scroll">
+      <h3>Datos del Aprendiz</h3>
+      <ul>
         <li><strong>Nombre:</strong> Jeisson Smith Galvis Tello</li>
         <li><strong>Programa:</strong> Análisis y Desarrollo de Software</li>
         <li><strong>Centro de formación:</strong> SENA</li>
@@ -75,15 +65,14 @@
       </ul>
     </section>
 
-    <!-- Enlaces de navegación a otras secciones -->
-    <section class="section-links">
-      <h3 class="section-title">Explora las secciones:</h3>
+    <section class="section-links section animate-on-scroll">
+      <h3>Explora las secciones:</h3>
       <div class="links">
-        <a href="analisis.html" class="btn btn-primary">📘 Análisis</a>
-        <a href="contexto.html" class="btn btn-primary">📝 Contexto</a>
-        <a href="ficha.html" class="btn btn-primary">📑 Ficha</a>
-        <a href="modelo.html" class="btn btn-primary">📊 Modelo</a>
-        <a href="propuesta.html" class="btn btn-primary">📃 Propuesta</a>
+        <a href="about.html" class="btn btn-primary">📘 Introducción</a>
+        <a href="tecnologias.html" class="btn btn-primary">🛠️ Tecnologías</a>
+        <a href="licencias.html" class="btn btn-primary">📜 Licenciamiento</a>
+        <a href="costos.html" class="btn btn-primary">💰 Costos</a>
+        <a href="conclusion.html" class="btn btn-primary">✅ Conclusión</a>
       </div>
     </section>
   </main>
@@ -91,11 +80,9 @@
   <footer class="main-footer">
     <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
     <div class="social-media">
-      <a href="https://www.linkedin.com/in/jeisson-smith/" target="_blank" class="social-icon">LinkedIn</a>
-      <a href="https://github.com/jeisson-smith" target="_blank" class="social-icon">GitHub</a>
+      <a href="https://github.com/JeissonTello" class="social-icon">GitHub</a>
+      <a href="https://linkedin.com/in/jeissontello" class="social-icon">LinkedIn</a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
