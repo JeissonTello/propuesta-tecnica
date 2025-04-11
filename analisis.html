@@ -2,69 +2,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Análisis - SGI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contexto del Proyecto</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <h1>Análisis del Sistema de Gestión de Inventarios (SGI)</h1>
-      <p class="subtitle">Requisitos, Alcance y Justificación</p>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="ficha.html">Ficha</a>
-        <a href="propuesta.html">Propuesta</a>
-        <a href="modelo.html">Modelo</a>
-        <a href="analisis.html">Análisis</a>
-      </nav>
-    </div>
+
+  <header class="header">
+    <div class="logo">Sistema de Gestión de Inventarios</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="contexto.html" class="active">Contexto</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="modelo.html">Modelo</a>
+      <a href="ficha.html">Ficha</a>
+      <a href="propuesta.html">Propuesta</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="card">
-      <h2>Requisitos del Proyecto</h2>
-      <p>El sistema SGI debe cumplir con los siguientes requisitos esenciales para optimizar la gestión de inventarios en la empresa:</p>
-      <ul>
-        <li><strong>Gestión de Productos:</strong> Registro, modificación, eliminación y consulta de productos, con detalles como nombre, precio, cantidad y categoría.</li>
-        <li><strong>Control de Stock:</strong> Actualización en tiempo real de las existencias de productos, con alertas para productos por debajo del umbral de stock mínimo.</li>
-        <li><strong>Gestión de Pedidos:</strong> Creación y seguimiento de pedidos a proveedores y clientes, con estados detallados (pendiente, en proceso, entregado).</li>
-        <li><strong>Usuarios y Roles:</strong> Gestión de accesos para diferentes niveles de usuarios (administradores, empleados, gerentes) y permisos específicos para cada rol.</li>
-        <li><strong>Reportes:</strong> Generación de reportes en tiempo real sobre el estado del inventario, ventas, compras, etc.</li>
-      </ul>
+  <main class="container">
+    <section class="cards-section">
+      <h2 class="section-title">Contexto del Proyecto</h2>
+      <div class="card">
+        <p>
+          El Sistema de Gestión de Inventarios surge como respuesta a la necesidad de muchas empresas de organizar y optimizar sus procesos internos relacionados con el control de productos, insumos y pedidos. Este sistema busca centralizar la información, reducir errores humanos, y facilitar la toma de decisiones mediante una interfaz amigable y herramientas digitales modernas.
+        </p>
+        <p>
+          En la actualidad, muchas pequeñas y medianas empresas (PyMEs) enfrentan desafíos significativos en el manejo de sus inventarios, lo cual puede generar pérdidas económicas, sobrestock, desabastecimiento o fallas en la atención al cliente. Con este proyecto, se propone una solución eficiente, intuitiva y escalable que permita mejorar sustancialmente dichos procesos.
+        </p>
+        <p>
+          El presente proyecto hace parte del desarrollo formativo en el marco del programa Análisis y Desarrollo de Software del SENA, y su objetivo principal es aplicar buenas prácticas de ingeniería de software en un caso real de automatización de procesos empresariales.
+        </p>
+      </div>
     </section>
-
-    <section class="card">
-      <h2>Alcance del Proyecto</h2>
-      <p>El SGI tiene como objetivo principal optimizar los procesos internos de gestión de inventarios en empresas medianas a grandes. El sistema permitirá:</p>
-      <ul>
-        <li><strong>Optimizar el control de inventarios:</strong> Mejorar la precisión en el seguimiento de existencias, evitando pérdidas o exceso de stock.</li>
-        <li><strong>Acelerar el procesamiento de pedidos:</strong> Reducir el tiempo y los errores en la creación y seguimiento de pedidos de productos.</li>
-        <li><strong>Facilitar la toma de decisiones:</strong> Proveer datos y reportes en tiempo real para que los gerentes y administradores puedan tomar decisiones informadas.</li>
-        <li><strong>Mejorar la experiencia del cliente:</strong> Ofrecer un servicio más ágil y preciso, aumentando la satisfacción del cliente.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Justificación del Proyecto</h2>
-      <p>La implementación de este sistema es esencial para la empresa, ya que:</p>
-      <ul>
-        <li><strong>Reducción de errores:</strong> El uso de un sistema automatizado minimiza los errores humanos en el manejo del inventario.</li>
-        <li><strong>Mayor eficiencia operativa:</strong> Los procesos automatizados permiten gestionar grandes volúmenes de inventario sin aumentar los costos operativos.</li>
-        <li><strong>Mejor control de recursos:</strong> El sistema permite un control más efectivo de los productos en stock, lo que se traduce en una mejor planificación de compras y ventas.</li>
-        <li><strong>Ahorro de tiempo:</strong> La automatización de tareas y la centralización de datos permite a los empleados centrarse en tareas más productivas.</li>
-      </ul>
-    </section>
-
-    <div class="section-links">
-      <a href="propuesta.html" class="btn">⬅️ Volver a la Propuesta</a>
-      <a href="contexto.html" class="btn">➡️ Continuar con el Contexto</a>
-    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
+  <footer class="footer">
+    <p>© 2025 Jeisson Smith Galvis Tello - Todos los derechos reservados</p>
   </footer>
+
 </body>
 </html>
