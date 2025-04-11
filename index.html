@@ -1,56 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Propuesta Técnica SGI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="main-header">
-    <div class="header-container">
-      <h1 class="main-title">Sistema de Gestión de Inventarios (SGI)</h1>
+    <div class="container">
+      <h1>Sistema de Gestión de Inventarios (SGI)</h1>
       <p class="subtitle">Propuesta Técnica y Económica</p>
       <nav class="navbar">
-        <a href="about.html" class="nav-link">Introducción</a>
-        <a href="tecnologias.html" class="nav-link">Tecnologías</a>
-        <a href="licencias.html" class="nav-link">Licenciamiento</a>
-        <a href="costos.html" class="nav-link">Costos</a>
-        <a href="conclusion.html" class="nav-link">Conclusión</a>
+        <a href="index.html">Inicio</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="ficha.html">Ficha técnica</a>
+        <a href="propuesta.html">Propuesta</a>
+        <a href="modelo.html">Modelo del sistema</a>
+        <a href="analisis.html">Análisis</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero-section section animate-on-scroll">
-      <div class="hero-content">
-        <h2 class="hero-title">Bienvenido a la propuesta técnica del SGI</h2>
-        <p class="hero-description">Este sitio expone la planeación técnica y económica para el desarrollo del Sistema de Gestión de Inventarios, orientado a optimizar procesos internos, controlar productos y facilitar la toma de decisiones empresariales.</p>
-      </div>
-      <img src="assets/banner.jpg" alt="Banner del proyecto" class="hero-banner">
-    </section>
-
-    <section class="card-container section animate-on-scroll">
-      <div class="card">
-        <img src="assets/icon1.png" alt="Icono 1" class="card-icon">
-        <h3 class="card-title">Introducción</h3>
-        <p class="card-description">Conoce el contexto y objetivos del SGI, y su importancia en el proceso de gestión de inventarios.</p>
-        <a href="about.html" class="card-link">Leer más</a>
-      </div>
-
-      <div class="card">
-        <img src="assets/icon2.png" alt="Icono 2" class="card-icon">
-        <h3 class="card-title">Tecnologías</h3>
-        <p class="card-description">Explora las tecnologías utilizadas en el desarrollo del SGI, desde el backend hasta la interfaz.</p>
-        <a href="tecnologias.html" class="card-link">Leer más</a>
-      </div>
-
-      <div class="card">
-        <img src="assets/icon3.png" alt="Icono 3" class="card-icon">
-        <h3 class="card-title">Licencias</h3>
-        <p class="card-description">Infórmate sobre el licenciamiento del software y su relación con el desarrollo del SGI.</p>
-        <a href="licencias.html" class="card-link">Leer más</a>
+    <section class="hero-section animate-on-scroll">
+      <img src="assets/banner.jpg" alt="Banner SGI" class="banner" />
+      <div class="intro-text">
+        <h2>¡Bienvenido a la propuesta del SGI!</h2>
+        <p>
+          Este sitio expone la planeación técnica y económica para el desarrollo del Sistema de Gestión de Inventarios. Un proyecto orientado a optimizar los procesos internos, mejorar el control de productos y facilitar la toma de decisiones.
+        </p>
       </div>
     </section>
 
@@ -66,23 +46,42 @@
     </section>
 
     <section class="section-links section animate-on-scroll">
-      <h3>Explora las secciones:</h3>
-      <div class="links">
-        <a href="about.html" class="btn btn-primary">📘 Introducción</a>
-        <a href="tecnologias.html" class="btn btn-primary">🛠️ Tecnologías</a>
-        <a href="licencias.html" class="btn btn-primary">📜 Licenciamiento</a>
-        <a href="costos.html" class="btn btn-primary">💰 Costos</a>
-        <a href="conclusion.html" class="btn btn-primary">✅ Conclusión</a>
+      <h3>Explora la propuesta</h3>
+      <div class="card-container">
+        <a href="contexto.html" class="card">📘 Contexto</a>
+        <a href="ficha.html" class="card">📂 Ficha técnica</a>
+        <a href="propuesta.html" class="card">📝 Propuesta técnica</a>
+        <a href="modelo.html" class="card">🧩 Modelo del sistema</a>
+        <a href="analisis.html" class="card">🔍 Análisis funcional</a>
+      </div>
+    </section>
+
+    <!-- 🔥 SLIDER DE TESTIMONIOS -->
+    <section class="testimonial-slider section animate-on-scroll">
+      <h2>Testimonios</h2>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <p>"El SGI ha mejorado notablemente el flujo de inventarios y la precisión en los reportes."</p>
+            <cite>- Juan Pérez, Gerente de Logística</cite>
+          </div>
+          <div class="slide">
+            <p>"Una herramienta potente y muy fácil de usar, ahora todo está centralizado y automatizado."</p>
+            <cite>- Ana Martínez, Responsable de Inventario</cite>
+          </div>
+          <div class="slide">
+            <p>"El diseño del sistema es moderno, escalable y se adapta perfectamente a nuestras necesidades."</p>
+            <cite>- Carlos Gómez, Jefe de TI</cite>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
     <p>&copy; 2025 Jeisson Smith Galvis Tello - Proyecto Formativo SENA</p>
-    <div class="social-media">
-      <a href="https://github.com/JeissonTello" class="social-icon">GitHub</a>
-      <a href="https://linkedin.com/in/jeissontello" class="social-icon">LinkedIn</a>
-    </div>
   </footer>
 </body>
 </html>
