@@ -57,9 +57,12 @@ nav {
 }
 
 nav a {
-  color: #fff;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  color: #white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
