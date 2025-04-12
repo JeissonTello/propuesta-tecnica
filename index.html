@@ -7,7 +7,26 @@
   <title>Sistema de Gestión de Inventarios</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Loader */
+    :root {
+      --primary-color: #0a58ca;
+      --secondary-color: #084298;
+      --background-color: #f8f9fa;
+      --text-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
     #loader {
       position: fixed;
       top: 0;
@@ -23,106 +42,176 @@
 
     .loader-text {
       font-size: 2rem;
-      color: #0a58ca;
+      color: var(--primary-color);
       font-weight: bold;
     }
 
-    /* Botón primario */
+    .header {
+      background: var(--primary-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+      background: #fff;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
     .btn-primary {
-      display: inline-block;
-      background: #0a58ca;
+      background: var(--primary-color);
       color: #fff;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
       text-decoration: none;
+      font-size: 1rem;
       transition: background 0.3s;
     }
 
     .btn-primary:hover {
-      background: #084298;
+      background: var(--secondary-color);
+    }
+
+    .hero-image img {
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .cards-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #fff;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .cards-section p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary-color);
+      color: #fff;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Loader -->
   <div id="loader">
     <div class="loader-text">Cargando...</div>
   </div>
 
-  <!-- HEADER -->
   <header class="header">
-    <div class="container">
-      <div class="logo">Sistema de Gestión de Inventarios</div>
-      <nav class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="analisis.html">Análisis</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="propuesta.html">Propuesta</a>
-        <a href="modelo.html">Modelo</a>
-        <a href="ficha.html">Ficha</a>
-      </nav>
-    </div>
+    <div class="logo">Sistema de Gestión de Inventarios</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="contexto.html">Contexto</a>
+      <a href="propuesta.html">Propuesta</a>
+      <a href="modelo.html">Modelo</a>
+      <a href="ficha.html">Ficha</a>
+    </nav>
   </header>
 
-  <!-- HERO INICIO -->
-  <section id="inicio" class="hero">
+  <section class="hero">
     <div class="hero-content">
       <h1>Bienvenido al Sistema de Gestión de Inventarios</h1>
-      <p>Una herramienta diseñada para optimizar la gestión de inventarios en empresas de cualquier tamaño.</p>
+      <p>Optimiza y organiza tus procesos de inventario de forma eficiente, segura y personalizada.</p>
       <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
     </div>
     <div class="hero-image">
-      <img src="path_to_image.jpg" alt="Imagen de Inventarios">
+      <img src="inventario.jpg" alt="Imagen de Inventarios">
     </div>
   </section>
 
-  <!-- SECCIÓN ANÁLISIS -->
-  <section id="analisis" class="cards-section">
+  <section class="cards-section">
     <h2 class="section-title">Análisis</h2>
-    <p>Se describen los análisis realizados sobre el sistema de gestión de inventarios, incluyendo procesos implicados, necesidades y objetivos.</p>
+    <p>Revisa el análisis detallado de necesidades, procesos y oportunidades de mejora en la gestión de inventarios.</p>
     <a href="analisis.html" class="btn-primary">Ir a Análisis</a>
   </section>
 
-  <!-- SECCIÓN CONTEXTO -->
-  <section id="contexto" class="cards-section">
+  <section class="cards-section">
     <h2 class="section-title">Contexto</h2>
-    <p>Diseñado para ayudar a las empresas a optimizar el control de inventarios, mejorar la eficiencia y reducir errores.</p>
+    <p>Conoce el entorno y las condiciones que justifican el desarrollo del sistema de inventario para empresas.</p>
     <a href="contexto.html" class="btn-primary">Ver Contexto</a>
   </section>
 
-  <!-- SECCIÓN PROPUESTA -->
-  <section id="propuesta" class="cards-section">
+  <section class="cards-section">
     <h2 class="section-title">Propuesta</h2>
-    <p>Incluye el desarrollo de un software a medida que facilite el manejo de inventarios, con bases de datos, ventas y reportes.</p>
+    <p>Descubre la solución tecnológica planteada para una gestión moderna, rápida y precisa de inventarios.</p>
     <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
   </section>
 
-  <!-- SECCIÓN MODELO -->
-  <section id="modelo" class="cards-section">
+  <section class="cards-section">
     <h2 class="section-title">Modelo</h2>
-    <p>Explica los diagramas y el modelo arquitectónico del sistema, incluyendo diagramas de clases y actividades.</p>
+    <p>Consulta los diagramas, estructuras de datos y modelos que soportan el funcionamiento del sistema propuesto.</p>
     <a href="modelo.html" class="btn-primary">Ver Modelo</a>
   </section>
 
-  <!-- SECCIÓN FICHA -->
-  <section id="ficha" class="cards-section">
+  <section class="cards-section">
     <h2 class="section-title">Ficha Técnica</h2>
-    <p>Proporciona información técnica detallada: especificaciones, requisitos de hardware/software, costos y tiempos estimados.</p>
+    <p>Accede a la información técnica detallada: requerimientos, herramientas, tiempos de implementación y costos estimados.</p>
     <a href="ficha.html" class="btn-primary">Ver Ficha</a>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
   </footer>
 
   <script>
-    // Loader desaparecer después de 3 segundos
     window.onload = () => {
       setTimeout(() => {
         document.getElementById("loader").style.display = "none";
-      }, 3000);
+      }, 2000);
     }
   </script>
 
