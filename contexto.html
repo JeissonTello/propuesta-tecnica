@@ -7,37 +7,52 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background: #f9f9f9;
       color: #333;
+      line-height: 1.7;
     }
+
+    /* HEADER */
     header {
       background: #0a58ca;
       color: white;
-      padding: 1rem;
+      padding: 1rem 0;
       text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* Container */
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
+
     h2 {
       color: #0a58ca;
-      margin-top: 2rem;
+      font-size: 2.2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
+
     p {
-      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #444;
       margin-bottom: 1.5rem;
     }
+
     footer {
       background: #222;
       color: white;
@@ -45,47 +60,70 @@
       text-align: center;
       margin-top: 3rem;
     }
+
+    /* Card Styles */
     .card {
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      padding: 1.5rem;
-      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
+
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
-    .card img {
-      max-width: 60px;
-      margin-bottom: 1rem;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      color: #0a58ca;
-      margin-bottom: 1rem;
-    }
-    .card-content {
-      color: #555;
-    }
+
     .card-icon {
       font-size: 3rem;
       color: #0a58ca;
-    }
-    .section-title {
-      font-size: 2rem;
-      color: #0a58ca;
       margin-bottom: 1rem;
     }
-    /* Scroll animations */
+
+    .card-title {
+      font-size: 1.8rem;
+      color: #0a58ca;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card-content {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+
+    .card ul li {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #0a58ca;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    /* Animación de aparición */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
@@ -120,7 +158,7 @@
           <li>Errores humanos en conteos y actualizaciones.</li>
           <li>Falta de reportes claros para la toma de decisiones.</li>
         </ul>
-        <p>Esto genera retrasos, pérdidas económicas y baja satisfacción del cliente.</p>
+        <p>Estos problemas ocasionan retrasos, pérdidas económicas y afectan la satisfacción del cliente.</p>
       </div>
     </div>
 
@@ -129,14 +167,14 @@
       <div class="card-icon">💡</div>
       <div class="card-title">Justificación del Proyecto</div>
       <div class="card-content">
-        <p>La implementación de un Sistema de Gestión de Inventarios es esencial para optimizar los procesos logísticos de las empresas. Este proyecto busca:</p>
+        <p>El desarrollo e implementación de un Sistema de Gestión de Inventarios es crucial para mejorar la eficiencia de los procesos logísticos en las empresas. Este proyecto busca resolver los problemas actuales de control de inventarios al:</p>
         <ul>
-          <li>Automatizar las tareas manuales de control de inventarios.</li>
-          <li>Reducir los errores en los registros.</li>
-          <li>Ofrecer un control en tiempo real del inventario disponible.</li>
-          <li>Minimizar pérdidas y mejorar la eficiencia operativa.</li>
+          <li>Automatizar tareas manuales, reduciendo la intervención humana.</li>
+          <li>Reducir los errores en los registros y procesos de conteo.</li>
+          <li>Proveer un control en tiempo real sobre el inventario disponible.</li>
+          <li>Mejorar la capacidad de toma de decisiones mediante reportes precisos.</li>
         </ul>
-        <p>Con esto, se espera ofrecer una solución robusta para la gestión eficiente de los inventarios en las empresas.</p>
+        <p>Con esto, se busca ofrecer una solución integral y eficiente a los problemas logísticos de las empresas.</p>
       </div>
     </div>
 
@@ -145,13 +183,14 @@
       <div class="card-icon">🎯</div>
       <div class="card-title">Objetivo General de la Propuesta</div>
       <div class="card-content">
-        <p>Desarrollar un sistema de software a medida que permita a las empresas gestionar de manera eficiente sus inventarios. Este sistema ofrecerá:</p>
+        <p>El objetivo de esta propuesta es desarrollar un sistema de software a medida que permita gestionar los inventarios de manera eficaz. Este sistema debe ser capaz de:</p>
         <ul>
-          <li>Interfaz intuitiva para un fácil manejo.</li>
-          <li>Registro ordenado de productos y control en tiempo real.</li>
-          <li>Generación de reportes automáticos.</li>
-          <li>Optimización de los procesos logísticos y toma de decisiones informada.</li>
+          <li>Proveer una interfaz amigable e intuitiva para los usuarios.</li>
+          <li>Ofrecer un registro ordenado de productos y un control preciso del inventario.</li>
+          <li>Generar reportes automáticos de inventario y ventas.</li>
+          <li>Optimizar la logística interna, mejorando la eficiencia operativa.</li>
         </ul>
+        <p>Esto permitirá a las empresas mejorar la gestión de sus inventarios y facilitar una toma de decisiones más ágil y precisa.</p>
       </div>
     </div>
 
@@ -175,4 +214,3 @@
 
 </body>
 </html>
-
