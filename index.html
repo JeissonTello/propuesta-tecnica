@@ -4,34 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Gestión de Inventarios</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background: #f4f4f9;
-      color: #333;
+    :root {
+      --primary-color: #0a58ca;
+      --accent-color: #ffd700;
+      --text-color: #333;
+      --bg-color: #f4f4f9;
     }
 
-    /* Cargador */
-    #loader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .loader-text {
-      font-size: 2rem;
-      color: #0a58ca;
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
     }
 
     header {
-      background: #0a58ca;
+      background: var(--primary-color);
       color: #fff;
       padding: 1rem 0;
       position: sticky;
@@ -49,7 +41,7 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: bold;
     }
 
@@ -62,38 +54,37 @@
     }
 
     .nav a:hover {
-      color: #ffd700;
+      color: var(--accent-color);
     }
 
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 50px 20px;
-      background: linear-gradient(to right, #0a58ca, #0077ff);
+      padding: 60px 20px;
+      background: linear-gradient(to right, var(--primary-color), #0077ff);
       color: #fff;
       text-align: center;
     }
 
-    .hero-content {
-      flex: 1;
-      padding: 20px;
+    .hero h2 {
+      font-size: 3rem;
     }
 
-    .hero h2 {
-      font-size: 2.5rem;
-      color: black;
+    .hero p {
+      font-size: 1.2rem;
     }
 
     .btn-primary {
       display: inline-block;
-      background: #ffd700;
-      color: #333;
-      padding: 10px 20px;
+      background: var(--accent-color);
+      color: var(--text-color);
+      padding: 12px 24px;
       text-decoration: none;
       border-radius: 8px;
       margin-top: 20px;
       transition: 0.3s;
+      font-weight: bold;
     }
 
     .btn-primary:hover {
@@ -101,75 +92,65 @@
     }
 
     .cards-section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
+      text-align: center;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 30px;
-      text-align: center;
     }
 
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 30px;
     }
 
     .card {
       background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.4s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
     }
 
     .card h3 {
       margin-top: 0;
+      font-size: 1.5rem;
     }
 
     .card p {
+      font-size: 1rem;
       margin: 10px 0 20px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #0a58ca;
+      background: var(--primary-color);
       color: #fff;
-      margin-top: 50px;
-    }
-
-    /* Animación scroll */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Cargador -->
-  <div id="loader">
-    <div class="loader-text">Cargando...</div>
-  </div>
-
-  <!-- HEADER -->
   <header>
     <div class="container">
-      <div class="logo">Sistema de Gestión de Inventarios</div>
+      <div class="logo">SGI Inventarios</div>
       <nav class="nav">
         <a href="index.html">Inicio</a>
         <a href="analisis.html">Análisis</a>
@@ -181,77 +162,59 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
+    <div>
       <h2>Bienvenido al Sistema de Gestión de Inventarios</h2>
-      <p>Optimiza el control y manejo de inventarios de tu empresa con nuestro software especializado.</p>
+      <p>Organiza y optimiza tus procesos de inventario de forma eficiente y moderna.</p>
       <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
     </div>
   </section>
 
-  <!-- SECCIONES -->
-  <section class="cards-section fade-in">
+  <section class="cards-section">
     <h2 class="section-title">Secciones del Proyecto</h2>
     <div class="card-grid">
 
       <div class="card">
+        <i class="fas fa-search"></i>
         <h3>Análisis</h3>
-        <p>Revisión de necesidades, procesos y objetivos clave para la gestión de inventarios.</p>
+        <p>Explora las necesidades, procesos y objetivos del sistema.</p>
         <a href="analisis.html" class="btn-primary">Ver Análisis</a>
       </div>
 
       <div class="card">
+        <i class="fas fa-globe"></i>
         <h3>Contexto</h3>
-        <p>Descripción del entorno empresarial y las razones que impulsan la creación del sistema.</p>
+        <p>Conoce el entorno empresarial y justificación del proyecto.</p>
         <a href="contexto.html" class="btn-primary">Ver Contexto</a>
       </div>
 
       <div class="card">
+        <i class="fas fa-lightbulb"></i>
         <h3>Propuesta</h3>
-        <p>Desarrollo de una solución digital a medida para optimizar inventarios.</p>
+        <p>Descubre la solución digital planteada para la gestión eficiente.</p>
         <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
       </div>
 
       <div class="card">
+        <i class="fas fa-diagram-project"></i>
         <h3>Modelo</h3>
-        <p>Diagramas, modelos de datos y arquitectura técnica del proyecto.</p>
+        <p>Revisa los diagramas, estructuras y arquitectura del sistema.</p>
         <a href="modelo.html" class="btn-primary">Ver Modelo</a>
       </div>
 
       <div class="card">
+        <i class="fas fa-file-alt"></i>
         <h3>Ficha Técnica</h3>
-        <p>Información detallada sobre requisitos técnicos, costos y recursos.</p>
+        <p>Consulta los datos técnicos, recursos y costos asociados.</p>
         <a href="ficha.html" class="btn-primary">Ver Ficha</a>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    // Cargador
-    window.onload = () => {
-      setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-      }, 1500);
-    };
-
-    // Animaciones al hacer scroll
-    const faders = document.querySelectorAll('.fade-in');
-    window.addEventListener('scroll', () => {
-      faders.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 100) {
-          section.classList.add('visible');
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
