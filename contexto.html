@@ -45,6 +45,51 @@
       text-align: center;
       margin-top: 3rem;
     }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      max-width: 60px;
+      margin-bottom: 1rem;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      color: #0a58ca;
+      margin-bottom: 1rem;
+    }
+    .card-content {
+      color: #555;
+    }
+    .card-icon {
+      font-size: 3rem;
+      color: #0a58ca;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #0a58ca;
+      margin-bottom: 1rem;
+    }
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -62,15 +107,53 @@
   </header>
 
   <div class="container">
+    
+    <!-- Descripción del Problema -->
+    <div class="card fade-in" id="problema">
+      <div class="card-icon">⚠️</div>
+      <div class="card-title">Descripción del Problema</div>
+      <div class="card-content">
+        <p>Actualmente, muchas empresas enfrentan dificultades en la gestión eficiente de sus inventarios. Entre los principales problemas se encuentran:</p>
+        <ul>
+          <li>Descontrol en el registro de productos.</li>
+          <li>Pérdida de información debido a procesos manuales.</li>
+          <li>Errores humanos en conteos y actualizaciones.</li>
+          <li>Falta de reportes claros para la toma de decisiones.</li>
+        </ul>
+        <p>Esto genera retrasos, pérdidas económicas y baja satisfacción del cliente.</p>
+      </div>
+    </div>
 
-    <h2>Descripción del Problema</h2>
-    <p>Actualmente, muchas empresas enfrentan dificultades en la gestión eficiente de sus inventarios. Entre los principales problemas se encuentran el descontrol en el registro de productos, la pérdida de información, errores humanos en conteos y actualizaciones, y la falta de reportes claros para la toma de decisiones. Esto genera retrasos, pérdidas económicas y una baja satisfacción en el servicio al cliente.</p>
+    <!-- Justificación del Proyecto -->
+    <div class="card fade-in" id="justificacion">
+      <div class="card-icon">💡</div>
+      <div class="card-title">Justificación del Proyecto</div>
+      <div class="card-content">
+        <p>La implementación de un Sistema de Gestión de Inventarios es esencial para optimizar los procesos logísticos de las empresas. Este proyecto busca:</p>
+        <ul>
+          <li>Automatizar las tareas manuales de control de inventarios.</li>
+          <li>Reducir los errores en los registros.</li>
+          <li>Ofrecer un control en tiempo real del inventario disponible.</li>
+          <li>Minimizar pérdidas y mejorar la eficiencia operativa.</li>
+        </ul>
+        <p>Con esto, se espera ofrecer una solución robusta para la gestión eficiente de los inventarios en las empresas.</p>
+      </div>
+    </div>
 
-    <h2>Justificación del Proyecto</h2>
-    <p>La implementación de un Sistema de Gestión de Inventarios es esencial para optimizar los procesos logísticos de las empresas. Este proyecto busca automatizar las tareas manuales, reducir errores y ofrecer un control en tiempo real del inventario disponible. Con ello, se pretende mejorar la eficiencia operativa, minimizar pérdidas y ofrecer información confiable para una adecuada toma de decisiones.</p>
-
-    <h2>Objetivo General de la Propuesta</h2>
-    <p>Desarrollar un sistema de software a medida que permita a las empresas gestionar de manera eficiente sus inventarios, mediante una interfaz intuitiva, registro ordenado de productos, generación de reportes automáticos y control en tiempo real de las existencias disponibles.</p>
+    <!-- Objetivo General -->
+    <div class="card fade-in" id="objetivo">
+      <div class="card-icon">🎯</div>
+      <div class="card-title">Objetivo General de la Propuesta</div>
+      <div class="card-content">
+        <p>Desarrollar un sistema de software a medida que permita a las empresas gestionar de manera eficiente sus inventarios. Este sistema ofrecerá:</p>
+        <ul>
+          <li>Interfaz intuitiva para un fácil manejo.</li>
+          <li>Registro ordenado de productos y control en tiempo real.</li>
+          <li>Generación de reportes automáticos.</li>
+          <li>Optimización de los procesos logísticos y toma de decisiones informada.</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 
@@ -78,5 +161,18 @@
     <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    // Detectar el scroll para animar el contenido
+    window.addEventListener('scroll', () => {
+      const cards = document.querySelectorAll('.fade-in');
+      cards.forEach(card => {
+        if (card.getBoundingClientRect().top < window.innerHeight) {
+          card.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
+
