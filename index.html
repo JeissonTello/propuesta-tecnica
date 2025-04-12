@@ -60,8 +60,10 @@
     .hero {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
-      padding: 60px 20px;
+      flex-direction: column;
+      padding: 100px 20px;
       background: linear-gradient(to right, var(--primary-color), #0077ff);
       color: #fff;
       text-align: center;
@@ -69,20 +71,21 @@
 
     .hero h2 {
       font-size: 3rem;
+      margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 1.2rem;
+      margin-bottom: 30px;
     }
 
     .btn-primary {
       display: inline-block;
       background: var(--accent-color);
       color: var(--text-color);
-      padding: 12px 24px;
+      padding: 14px 28px;
       text-decoration: none;
       border-radius: 8px;
-      margin-top: 20px;
       transition: 0.3s;
       font-weight: bold;
     }
