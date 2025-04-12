@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema de Gestión de Inventarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <style>
-        /* Cargador con animación */
+        /* Cargador de página con animación */
         #loader {
             position: fixed;
             top: 0;
@@ -26,6 +27,7 @@
         .loader-text {
             font-size: 2rem;
             color: #0a58ca;
+            font-family: 'Roboto', sans-serif;
         }
 
         /* Estilo del Header */
@@ -46,9 +48,10 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: white;
+            font-family: 'Roboto', sans-serif;
         }
 
         .nav {
@@ -60,6 +63,7 @@
             margin-left: 20px;
             text-decoration: none;
             font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
             transition: all 0.3s ease;
         }
 
@@ -73,21 +77,29 @@
             justify-content: space-between;
             padding: 60px 0;
             background-color: #f4f7fb;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-content {
             flex: 1;
             padding-right: 20px;
+            position: relative;
+            z-index: 10;
         }
 
         .hero-content h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
         }
 
         .hero-content p {
             font-size: 1.2rem;
             margin-bottom: 20px;
+            color: #666;
+            font-family: 'Roboto', sans-serif;
         }
 
         .hero-image img {
@@ -95,6 +107,11 @@
             max-width: 500px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
         }
 
         .btn-primary {
@@ -103,11 +120,24 @@
             padding: 12px 20px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: 'Roboto', sans-serif;
         }
 
         .btn-primary:hover {
             background-color: #003f77;
+            transform: scale(1.05);
+        }
+
+        /* Efecto Parallax */
+        .parallax {
+            background-image: url('path_to_image.jpg');
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: -1;
         }
 
         /* Estilos de las secciones de tarjetas */
@@ -118,17 +148,20 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             margin-bottom: 30px;
+            position: relative;
         }
 
         .section-title {
             font-size: 2rem;
             margin-bottom: 20px;
             color: #0a58ca;
+            font-family: 'Roboto', sans-serif;
         }
 
         .cards-section p {
             font-size: 1.1rem;
             margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
         }
 
         /* Estilo Footer */
@@ -137,6 +170,7 @@
             color: white;
             padding: 20px;
             text-align: center;
+            font-family: 'Roboto', sans-serif;
         }
 
         /* Estilos responsivos */
@@ -160,10 +194,22 @@
                 margin-left: 0;
                 margin-bottom: 10px;
             }
+
+            .btn-primary {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+
+        /* Lazy Loading Image */
+        .lazyload {
+            opacity: 0;
+            transition: opacity 1s ease-out;
         }
     </style>
 </head>
 <body>
+
     <!-- Cargador de Página -->
     <div id="loader">
         <div class="loader-text">Cargando...</div>
@@ -192,7 +238,7 @@
             <a href="propuesta.html" class="btn-primary">Ver más</a>
         </div>
         <div class="hero-image">
-            <img src="path_to_image.jpg" alt="Imagen de Inventarios">
+            <img data-src="path_to_image.jpg" class="lazyload" alt="Imagen de Inventarios">
         </div>
     </section>
 
@@ -213,53 +259,38 @@
     <!-- SECCIÓN PROPUESTA -->
     <section id="propuesta" class="cards-section">
         <h2 class="section-title">Propuesta</h2>
-        <p>La propuesta del sistema incluye el desarrollo de un software a medida que facilite el manejo de inventarios, con integración de bases de datos, funcionalidades de ventas y reportes.</p>
+        <p>La propuesta del sistema incluye el desarrollo de un software a medida que facilite las tareas de los encargados de gestionar el inventario de productos y mercancías.</p>
         <a href="propuesta.html" class="btn-primary">Leer más</a>
     </section>
 
-    <!-- SECCIÓN MODELO -->
-    <section id="modelo" class="cards-section">
-        <h2 class="section-title">Modelo</h2>
-        <p>En esta sección se explican los diagramas y el modelo arquitectónico del sistema, incluyendo los diagramas de clases y actividades.</p>
-    </section>
-
-    <!-- SECCIÓN FICHA -->
-    <section id="ficha" class="cards-section">
-        <h2 class="section-title">Ficha Técnica</h2>
-        <p>En esta sección se proporciona información técnica detallada sobre el proyecto, incluyendo especificaciones, requisitos de hardware y software, costos y tiempos estimados.</p>
-        <a href="ficha.html" class="btn-primary">Leer más</a>
-    </section>
-
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Animaciones con GSAP para las secciones
-        gsap.from(".animated-title", {
-            opacity: 0,
-            y: -50,
-            duration: 1,
-            stagger: 0.3,
-        });
-
-        gsap.from(".animated-description", {
-            opacity: 0,
-            y: 50,
-            duration: 1.5,
-            delay: 0.5,
-        });
-
-        // Eliminar el cargador después de 3 segundos
+        // Desaparecer cargador de página después de 1.5 segundos
         window.onload = () => {
             setTimeout(() => {
-                document.getElementById("loader").style.opacity = "0";
+                document.getElementById("loader").style.opacity = 0;
                 setTimeout(() => {
                     document.getElementById("loader").style.display = "none";
-                }, 1000); // 1 segundo de transición
-            }, 3000); // 3 segundos de cargador
-        }
+                }, 1000);
+            }, 1500);
+        };
+
+        // Efectos de Scroll con GSAP
+        gsap.from(".hero-content", { opacity: 0, x: -100, duration: 1.5 });
+        gsap.from(".hero-image img", { opacity: 0, y: 100, duration: 1.5, delay: 0.5 });
+
+        // Lazy Loading de imágenes
+        document.querySelectorAll('.lazyload').forEach(img => {
+            img.src = img.dataset.src;
+            img.onload = () => {
+                img.style.opacity = 1;
+            };
+        });
     </script>
+
 </body>
 </html>
