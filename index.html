@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema de Gestión de Inventarios</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <style>
-        /* Cargador de página con animación */
+        /* Cargador */
         #loader {
             position: fixed;
             top: 0;
@@ -22,168 +19,11 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            opacity: 1;
-            transition: opacity 1s ease-out;
         }
+
         .loader-text {
             font-size: 2rem;
             color: #0a58ca;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        /* Estilo del Header */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .nav {
-            display: flex;
-        }
-
-        .nav a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-family: 'Roboto', sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: #0a58ca;
-            transform: scale(1.1);
-        }
-
-        /* Fondo interactivo de mouse */
-        .interactive-bg {
-            background: url('path_to_image.jpg') no-repeat center center/cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* Sección Hero */
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            padding: 60px 0;
-            background-color: #f4f7fb;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            flex: 1;
-            padding-right: 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .hero-content h2 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #666;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .hero-image img {
-            width: 50%;
-            max-width: 500px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.4s ease;
-        }
-
-        .hero-image img:hover {
-            transform: scale(1.05);
-        }
-
-        .btn-primary {
-            background-color: #0a58ca;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .btn-primary:hover {
-            background-color: #003f77;
-            transform: scale(1.05);
-        }
-
-        /* Estilo Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        /* Estilos responsivos */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-image img {
-                width: 80%;
-                margin: 20px 0;
-            }
-
-            .nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav a {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-
-            .btn-primary {
-                font-size: 1rem;
-                padding: 10px 15px;
-            }
-        }
-
-        /* Lazy Loading Image */
-        .lazyload {
-            opacity: 0;
-            transition: opacity 1s ease-out;
         }
     </style>
 </head>
@@ -194,20 +34,17 @@
         <div class="loader-text">Cargando...</div>
     </div>
 
-    <!-- Fondo Interactivo -->
-    <div class="interactive-bg"></div>
-
     <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <div class="logo" aria-label="Logo del Sistema de Gestión de Inventarios">Sistema de Gestión de Inventarios</div>
-            <nav class="nav" aria-label="Navegación principal">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="analisis.html" class="nav-link">Análisis</a>
-                <a href="contexto.html" class="nav-link">Contexto</a>
-                <a href="propuesta.html" class="nav-link">Propuesta</a>
-                <a href="modelo.html" class="nav-link">Modelo</a>
-                <a href="ficha.html" class="nav-link">Ficha</a>
+            <div class="logo">Sistema de Gestión de Inventarios</div>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="analisis.html">Análisis</a>
+                <a href="contexto.html">Contexto</a>
+                <a href="propuesta.html">Propuesta</a>
+                <a href="modelo.html">Modelo</a>
+                <a href="ficha.html">Ficha</a>
             </nav>
         </div>
     </header>
@@ -215,50 +52,62 @@
     <!-- SECCIÓN INICIO -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h2 class="animated-title">Bienvenido al Sistema de Gestión de Inventarios</h2>
-            <p class="animated-description">Una herramienta diseñada para optimizar la gestión de inventarios en empresas de cualquier tamaño.</p>
+            <h2>Bienvenido al Sistema de Gestión de Inventarios</h2>
+            <p>Una herramienta diseñada para optimizar la gestión de inventarios en empresas de cualquier tamaño.</p>
             <a href="propuesta.html" class="btn-primary">Ver más</a>
         </div>
         <div class="hero-image">
-            <img data-src="path_to_image.jpg" class="lazyload" alt="Imagen de Inventarios">
+            <img src="path_to_image.jpg" alt="Imagen de Inventarios">
         </div>
+    </section>
+
+    <!-- SECCIÓN ANÁLISIS -->
+    <section id="analisis" class="cards-section">
+        <h2 class="section-title">Análisis</h2>
+        <p>Aquí se describen los análisis realizados sobre el sistema de gestión de inventarios, incluyendo los procesos implicados, necesidades y objetivos que se busca alcanzar.</p>
+        <a href="analisis.html" class="btn-primary">Ir al Análisis</a>
+    </section>
+
+    <!-- SECCIÓN CONTEXTO -->
+    <section id="contexto" class="cards-section">
+        <h2 class="section-title">Contexto</h2>
+        <p>El sistema de gestión de inventarios fue diseñado para ayudar a las empresas a optimizar su control de inventarios, mejorar la eficiencia y reducir el margen de error.</p>
+        <a href="contexto.html" class="btn-primary">Ver Contexto</a>
     </section>
 
     <!-- SECCIÓN PROPUESTA -->
     <section id="propuesta" class="cards-section">
         <h2 class="section-title">Propuesta</h2>
-        <p>La propuesta del sistema incluye el desarrollo de un software a medida que facilite las tareas de los encargados de gestionar el inventario de productos y mercancías.</p>
-        <a href="propuesta.html" class="btn-primary">Leer más</a>
+        <p>La propuesta del sistema incluye el desarrollo de un software a medida que facilite el manejo de inventarios, con integración de bases de datos, funcionalidades de ventas y reportes.</p>
+        <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
+    </section>
+
+    <!-- SECCIÓN MODELO -->
+    <section id="modelo" class="cards-section">
+        <h2 class="section-title">Modelo</h2>
+        <p>En esta sección se explican los diagramas y el modelo arquitectónico del sistema, incluyendo los diagramas de clases y actividades.</p>
+        <a href="modelo.html" class="btn-primary">Ver Modelo</a>
+    </section>
+
+    <!-- SECCIÓN FICHA -->
+    <section id="ficha" class="cards-section">
+        <h2 class="section-title">Ficha Técnica</h2>
+        <p>En esta sección se proporciona información técnica detallada sobre el proyecto, incluyendo especificaciones, requisitos de hardware y software, costos y tiempos estimados.</p>
+        <a href="ficha.html" class="btn-primary">Ver Ficha</a>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Desaparecer cargador de página después de 1.5 segundos
+        // Eliminar el cargador después de 3 segundos
         window.onload = () => {
             setTimeout(() => {
-                document.getElementById("loader").style.opacity = 0;
-                setTimeout(() => {
-                    document.getElementById("loader").style.display = "none";
-                }, 1000);
-            }, 1500);
-        };
-
-        // Efectos de Scroll con GSAP
-        gsap.from(".hero-content", { opacity: 0, x: -100, duration: 1.5 });
-        gsap.from(".hero-image img", { opacity: 0, y: 100, duration: 1.5, delay: 0.5 });
-
-        // Lazy Loading de imágenes
-        document.querySelectorAll('.lazyload').forEach(img => {
-            img.src = img.dataset.src;
-            img.onload = () => {
-                img.style.opacity = 1;
-            };
-        });
+                document.getElementById("loader").style.display = "none";
+            }, 3000); // 3 segundos de cargador
+        }
     </script>
-
 </body>
 </html>
