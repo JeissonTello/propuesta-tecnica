@@ -2,11 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Propuesta - Sistema de Gestión de Inventarios</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="header">
     <div class="container">
       <h1 class="logo">Sistema de Gestión de Inventarios</h1>
@@ -21,97 +24,110 @@
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section class="cards-section">
       <h2 class="section-title">Propuesta Técnica y Económica</h2>
 
-      <!-- Tabla de Costos Fijos y Variables -->
+      <!-- Tabla de Costos Fijos -->
       <h3>Costos Fijos</h3>
-      <table class="card">
-        <tr>
-          <th>Concepto</th>
-          <th>Descripción</th>
-          <th>Costo Aproximado (COP)</th>
-          <th>Tiempo Estimado (días)</th>
-        </tr>
-        <tr>
-          <td>Desarrollo de Software</td>
-          <td>Desarrollo de aplicación web con módulos de ventas, facturación, inventario y reportes.</td>
-          <td>$20.000.000</td>
-          <td>125</td>
-        </tr>
-        <tr>
-          <td>Investigación y Análisis</td>
-          <td>Análisis de requerimientos, estudio de mercado, arquitectura de software.</td>
-          <td>$2.500.000</td>
-          <td>20</td>
-        </tr>
-        <tr>
-          <td>Diseño UX/UI</td>
-          <td>Creación de interfaces atractivas y experiencia de usuario intuitiva.</td>
-          <td>$2.000.000</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Base de Datos</td>
-          <td>Configuración y optimización de base de datos MySQL y/o PostgreSQL.</td>
-          <td>$3.000.000</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Infraestructura y Hosting</td>
-          <td>Uso de Apache, con opción de migración futura a AWS, Azure o Google Cloud.</td>
-          <td>$2.500.000</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Licencias de Software</td>
-          <td>Uso de software Open Source: Linux, LibreOffice, MySQL/PostgreSQL, VS Code, Django, React.js, Pandas.</td>
-          <td>$1.500.000</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Hardware</td>
-          <td>Servidores y equipos necesarios para el desarrollo.</td>
-          <td>$4.500.000</td>
-          <td>N/A</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table class="card">
+          <tr>
+            <th>Concepto</th>
+            <th>Descripción</th>
+            <th>Costo Aproximado (COP)</th>
+            <th>Tiempo Estimado (días)</th>
+          </tr>
+          <tr>
+            <td>Desarrollo de Software</td>
+            <td>Desarrollo de aplicación web con módulos de ventas, facturación, inventario y reportes.</td>
+            <td>$20.000.000</td>
+            <td>125</td>
+          </tr>
+          <tr>
+            <td>Investigación y Análisis</td>
+            <td>Análisis de requerimientos, estudio de mercado, arquitectura de software.</td>
+            <td>$2.500.000</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Diseño UX/UI</td>
+            <td>Creación de interfaces atractivas y experiencia de usuario intuitiva.</td>
+            <td>$2.000.000</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Base de Datos</td>
+            <td>Configuración y optimización de base de datos MySQL y/o PostgreSQL.</td>
+            <td>$3.000.000</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Infraestructura y Hosting</td>
+            <td>Uso de Apache, con opción de migración futura a AWS, Azure o Google Cloud.</td>
+            <td>$2.500.000</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Licencias de Software</td>
+            <td>Uso de software Open Source: Linux, LibreOffice, MySQL/PostgreSQL, VS Code, Django, React.js, Pandas.</td>
+            <td>$1.500.000</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Hardware</td>
+            <td>Servidores y equipos necesarios para el desarrollo.</td>
+            <td>$4.500.000</td>
+            <td>N/A</td>
+          </tr>
+        </table>
+      </div>
 
+      <!-- Tabla de Costos Variables -->
       <h3>Costos Variables</h3>
-      <table class="card">
-        <tr>
-          <th>Concepto</th>
-          <th>Descripción</th>
-          <th>Costo Aproximado (COP)</th>
-          <th>Tiempo Estimado (días)</th>
-        </tr>
-        <tr>
-          <td>Imprevistos</td>
-          <td>Mantenimiento y soporte no anticipado.</td>
-          <td>$5.000.000</td>
-          <td>N/A</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table class="card">
+          <tr>
+            <th>Concepto</th>
+            <th>Descripción</th>
+            <th>Costo Aproximado (COP)</th>
+            <th>Tiempo Estimado (días)</th>
+          </tr>
+          <tr>
+            <td>Imprevistos</td>
+            <td>Mantenimiento y soporte no anticipado.</td>
+            <td>$5.000.000</td>
+            <td>N/A</td>
+          </tr>
+        </table>
+      </div>
 
+      <!-- Resumen Total del Proyecto -->
       <h3>Total del Proyecto</h3>
-      <table class="card">
-        <tr>
-          <th>Total del Proyecto</th>
-          <th>Costo Total Estimado (COP)</th>
-          <th>Tiempo Total Estimado (días)</th>
-        </tr>
-        <tr>
-          <td>Costo Total</td>
-          <td>$41.000.000</td>
-          <td>161</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table class="card">
+          <tr>
+            <th>Total del Proyecto</th>
+            <th>Costo Total Estimado (COP)</th>
+            <th>Tiempo Total Estimado (días)</th>
+          </tr>
+          <tr>
+            <td>Costo Total</td>
+            <td>$41.000.000</td>
+            <td>161</td>
+          </tr>
+        </table>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 Jeisson Smith Galvis Tello. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Botón de Scroll to Top -->
+  <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
 </body>
 </html>
