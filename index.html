@@ -118,10 +118,22 @@
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: 0.4s;
+      color: var(--text-color);
     }
 
     .card:hover {
       transform: translateY(-10px);
+      background: var(--accent-color);
+      color: #333;
+    }
+
+    .card:hover i {
+      color: var(--primary-color);
+    }
+
+    .card:hover .btn-primary{
+      background: var(--primary-color);
+      color: #fff;
     }
 
     .card i {
