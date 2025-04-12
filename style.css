@@ -47,12 +47,13 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .nav a:hover,
 .nav a.active {
   color: #ffc107;
+  transform: translateY(-2px);
 }
 
 /* HERO */
@@ -94,11 +95,14 @@ body {
   padding: 0.7rem 1.2rem;
   text-decoration: none;
   border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary:hover {
   background-color: #084298;
+  border-color: #ffc107;
 }
 
 /* CARDS */
@@ -146,10 +150,14 @@ body {
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 0.5rem;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-card:hover {
   background-color: #084298;
+  border-color: #ffc107;
 }
 
 /* FOOTER */
@@ -259,5 +267,3 @@ th {
   font-size: 1rem;
   color: #333;
 }
-
-
