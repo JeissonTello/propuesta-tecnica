@@ -1,32 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let botonArriba = document.createElement("button");
-    botonArriba.innerText = "↑";
-    botonArriba.style.position = "fixed";
-    botonArriba.style.bottom = "20px";
-    botonArriba.style.right = "20px";
-    botonArriba.style.background = "#007bff";
-    botonArriba.style.color = "white";
-    botonArriba.style.border = "none";
-    botonArriba.style.padding = "10px";
-    botonArriba.style.cursor = "pointer";
-    document.body.appendChild(botonArriba);
+  // Crear el botón de "Scroll to Top"
+  let botonArriba = document.createElement("button");
+  botonArriba.innerText = "↑";
+  botonArriba.id = "scrollToTopBtn"; // ID para la referencia CSS
+  botonArriba.style.position = "fixed";
+  botonArriba.style.bottom = "20px";
+  botonArriba.style.right = "20px";
+  botonArriba.style.background = "#007bff";
+  botonArriba.style.color = "white";
+  botonArriba.style.border = "none";
+  botonArriba.style.padding = "10px";
+  botonArriba.style.cursor = "pointer";
+  botonArriba.style.borderRadius = "50%";
+  botonArriba.style.opacity = "0.8";
+  botonArriba.style.transition = "opacity 0.3s ease";
+  document.body.appendChild(botonArriba);
 
-    gsap.from(".animated-title", {
-  opacity: 0,
-  y: -50,
-  duration: 1,
-  stagger: 0.3,
-});
+  // Hacer que el botón de "Scroll to Top" se muestre solo cuando se hace scroll
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      botonArriba.style.opacity = "1";
+    } else {
+      botonArriba.style.opacity = "0.8";
+    }
+  });
 
-gsap.from(".animated-description", {
-  opacity: 0,
-  y: 50,
-  duration: 1.5,
-  delay: 0.5,
-});
+  // Acción del botón "Scroll to Top"
+  botonArriba.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-    // Detecta cuando el usuario ha hecho scroll y agrega la clase para animación
-document.addEventListener("DOMContentLoaded", function() {
+  // Animaciones de entrada
+  gsap.from(".animated-title", {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    stagger: 0.3,
+  });
+
+  gsap.from(".animated-description", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    delay: 0.5,
+  });
+
+  // Detecta cuando el usuario ha hecho scroll y agrega la clase para animación
   const sections = document.querySelectorAll(".section");
 
   function checkVisibility() {
@@ -39,11 +58,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   window.addEventListener("scroll", checkVisibility);
-  checkVisibility();  // Para las secciones que ya están visibles al cargar la página
-});
-
-
-    botonArriba.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+  checkVisibility(); // Para las secciones que ya están visibles al cargar la página
 });
