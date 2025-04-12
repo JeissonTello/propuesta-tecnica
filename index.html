@@ -7,6 +7,7 @@
     <title>Sistema de Gestión de Inventarios</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <style>
         /* Cargador de página con animación */
@@ -69,6 +70,19 @@
 
         .nav a:hover {
             color: #0a58ca;
+            transform: scale(1.1);
+        }
+
+        /* Fondo interactivo de mouse */
+        .interactive-bg {
+            background: url('path_to_image.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
         }
 
         /* Sección Hero */
@@ -140,28 +154,52 @@
             z-index: -1;
         }
 
-        /* Estilos de las secciones de tarjetas */
-        .cards-section {
-            padding: 60px 0;
+        /* Sección de Testimonios */
+        .testimonials {
+            background-color: #f7f7f7;
+            padding: 50px 0;
+        }
+
+        .testimonials h2 {
             text-align: center;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
             margin-bottom: 30px;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
             color: #0a58ca;
-            font-family: 'Roboto', sans-serif;
         }
 
-        .cards-section p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            font-family: 'Roboto', sans-serif;
+        .testimonial-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .name {
+            font-weight: bold;
+            color: #333;
         }
 
         /* Estilo Footer */
@@ -199,6 +237,10 @@
                 font-size: 1rem;
                 padding: 10px 15px;
             }
+
+            .testimonial-card {
+                width: 90%;
+            }
         }
 
         /* Lazy Loading Image */
@@ -214,6 +256,9 @@
     <div id="loader">
         <div class="loader-text">Cargando...</div>
     </div>
+
+    <!-- Fondo Interactivo -->
+    <div class="interactive-bg"></div>
 
     <!-- HEADER -->
     <header class="header">
@@ -242,18 +287,19 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ANÁLISIS -->
-    <section id="analisis" class="cards-section">
-        <h2 class="section-title">Análisis</h2>
-        <p>Aquí se describen los análisis realizados sobre el sistema de gestión de inventarios, incluyendo los procesos implicados, necesidades y objetivos que se busca alcanzar.</p>
-        <a href="analisis.html" class="btn-primary">Leer más</a>
-    </section>
-
-    <!-- SECCIÓN CONTEXTO -->
-    <section id="contexto" class="cards-section">
-        <h2 class="section-title">Contexto</h2>
-        <p>El sistema de gestión de inventarios fue diseñado para ayudar a las empresas a optimizar su control de inventarios, mejorar la eficiencia y reducir el margen de error.</p>
-        <a href="contexto.html" class="btn-primary">Leer más</a>
+    <!-- SECCIÓN DE TESTIMONIOS -->
+    <section id="testimonios" class="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonial-card">
+            <img src="path_to_testimonial_image.jpg" alt="Testimonial">
+            <p>"El sistema de gestión de inventarios nos ha permitido optimizar todo nuestro proceso logístico, ¡un cambio total para nuestra empresa!"</p>
+            <div class="name">Juan Pérez</div>
+        </div>
+        <div class="testimonial-card">
+            <img src="path_to_testimonial_image.jpg" alt="Testimonial">
+            <p>"Gracias a esta herramienta, logramos reducir los errores en el manejo de inventarios y mejorar la eficiencia operativa."</p>
+            <div class="name">Ana López</div>
+        </div>
     </section>
 
     <!-- SECCIÓN PROPUESTA -->
@@ -294,3 +340,4 @@
 
 </body>
 </html>
+
