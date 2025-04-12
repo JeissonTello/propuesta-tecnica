@@ -3,164 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sistema de Gestión de Inventarios</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #0a58ca;
+      --accent-color: #ffd700;
+      --text-color: #333;
+      --bg-color: #f4f4f9;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
     }
-    .header {
-      background-color: #0a58ca;
-      padding: 1rem 2rem;
+
+    header {
+      background: var(--primary-color);
       color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
     }
-    .header nav a {
-      color: #fff;
-      margin-left: 1rem;
-      text-decoration: none;
+
+    .logo {
+      font-size: 1.8rem;
       font-weight: bold;
     }
+
+    .nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: var(--accent-color);
+    }
+
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(to right, #0a58ca, #0048a4);
+      padding: 60px 20px;
+      background: linear-gradient(to right, var(--primary-color), #0077ff);
       color: #fff;
+      text-align: center;
     }
-    .hero-content {
-      flex: 1;
-      min-width: 300px;
+
+    .hero h2 {
+      font-size: 3rem;
     }
-    .hero-content h2 {
-      font-size: 2.5rem;
-    }
-    .hero-content p {
-      margin: 1rem 0;
+
+    .hero p {
       font-size: 1.2rem;
     }
-    .hero-content a {
-      background: #fff;
-      color: #0a58ca;
-      padding: 0.7rem 1.5rem;
-      border-radius: 5px;
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent-color);
+      color: var(--text-color);
+      padding: 12px 24px;
       text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: 0.3s;
       font-weight: bold;
     }
-    .hero-image img {
-      max-width: 450px;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    .btn-primary:hover {
+      background: #ffbf00;
     }
+
     .cards-section {
-      padding: 3rem 2rem;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
       text-align: center;
     }
-    .cards-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0a58ca;
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
     }
-    .cards-section p {
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
-      line-height: 1.6;
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
-    .cards-section a {
-      background: #0a58ca;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 4px;
-      display: inline-block;
-      margin-top: 1rem;
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.4s;
     }
-    .cards-section img {
-      width: 100%;
-      max-width: 600px;
-      margin: 1.5rem 0;
-      border-radius: 10px;
+
+    .card:hover {
+      transform: translateY(-10px);
     }
-    .footer {
-      background-color: #333;
-      color: #fff;
+
+    .card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin: 10px 0 20px;
+    }
+
+    footer {
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 20px;
+      background: var(--primary-color);
+      color: #fff;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">Sistema de Gestión de Inventarios</div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="analisis.html">Análisis</a>
-    <a href="contexto.html">Contexto</a>
-    <a href="propuesta.html">Propuesta</a>
-    <a href="modelo.html">Modelo</a>
-    <a href="ficha.html">Ficha</a>
-  </nav>
-</header>
+  <header>
+    <div class="container">
+      <div class="logo">SGI Inventarios</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="analisis.html">Análisis</a>
+        <a href="contexto.html">Contexto</a>
+        <a href="propuesta.html">Propuesta</a>
+        <a href="modelo.html">Modelo</a>
+        <a href="ficha.html">Ficha</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Optimiza tu inventario hoy</h2>
-    <p>Un software moderno, rápido y eficiente para gestionar inventarios en empresas de cualquier tamaño.</p>
-    <a href="propuesta.html">Ver Propuesta</a>
-  </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1603570419989-c35f5f7a6c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gestión de Inventario">
-  </div>
-</section>
+  <section class="hero">
+    <div>
+      <h2>Bienvenido al Sistema de Gestión de Inventarios</h2>
+      <p>Organiza y optimiza tus procesos de inventario de forma eficiente y moderna.</p>
+      <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
+    </div>
+  </section>
 
-<section class="cards-section">
-  <h2>Análisis</h2>
-  <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Análisis">
-  <p>Conoce en detalle el diagnóstico y estudio realizado sobre los procesos de inventario, detectando fallos, necesidades y oportunidades de mejora.</p>
-  <a href="analisis.html">Ir a Análisis</a>
-</section>
+  <section class="cards-section">
+    <h2 class="section-title">Secciones del Proyecto</h2>
+    <div class="card-grid">
 
-<section class="cards-section">
-  <h2>Contexto</h2>
-  <img src="https://images.unsplash.com/photo-1581090700227-4c4c80b96c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Contexto">
-  <p>Descubre el entorno empresarial, necesidades actuales y retos que enfrenta la gestión de inventarios en el mercado actual.</p>
-  <a href="contexto.html">Ir a Contexto</a>
-</section>
+      <div class="card">
+        <i class="fas fa-search"></i>
+        <h3>Análisis</h3>
+        <p>Explora las necesidades, procesos y objetivos del sistema.</p>
+        <a href="analisis.html" class="btn-primary">Ver Análisis</a>
+      </div>
 
-<section class="cards-section">
-  <h2>Propuesta</h2>
-  <img src="https://images.unsplash.com/photo-1556742400-b5df6fa0c83f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Propuesta">
-  <p>Explora nuestra solución completa, que integra software, bases de datos, reportes y control eficiente de inventario.</p>
-  <a href="propuesta.html">Ver Propuesta</a>
-</section>
+      <div class="card">
+        <i class="fas fa-globe"></i>
+        <h3>Contexto</h3>
+        <p>Conoce el entorno empresarial y justificación del proyecto.</p>
+        <a href="contexto.html" class="btn-primary">Ver Contexto</a>
+      </div>
 
-<section class="cards-section">
-  <h2>Modelo</h2>
-  <img src="https://images.unsplash.com/photo-1629904853690-769a12284bdb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modelo">
-  <p>Revisa los diagramas de arquitectura, diagramas de clases y diagramas de actividades que sustentan el funcionamiento del sistema.</p>
-  <a href="modelo.html">Ver Modelo</a>
-</section>
+      <div class="card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Propuesta</h3>
+        <p>Descubre la solución digital planteada para la gestión eficiente.</p>
+        <a href="propuesta.html" class="btn-primary">Ver Propuesta</a>
+      </div>
 
-<section class="cards-section">
-  <h2>Ficha Técnica</h2>
-  <img src="https://images.unsplash.com/photo-1581091012184-5c3b6db84f56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ficha Técnica">
-  <p>Consulta los requisitos técnicos, costos, herramientas, plazos de implementación y consideraciones necesarias para llevar a cabo el proyecto.</p>
-  <a href="ficha.html">Ver Ficha</a>
-</section>
+      <div class="card">
+        <i class="fas fa-diagram-project"></i>
+        <h3>Modelo</h3>
+        <p>Revisa los diagramas, estructuras y arquitectura del sistema.</p>
+        <a href="modelo.html" class="btn-primary">Ver Modelo</a>
+      </div>
 
-<footer class="footer">
-  <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
-</footer>
+      <div class="card">
+        <i class="fas fa-file-alt"></i>
+        <h3>Ficha Técnica</h3>
+        <p>Consulta los datos técnicos, recursos y costos asociados.</p>
+        <a href="ficha.html" class="btn-primary">Ver Ficha</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
