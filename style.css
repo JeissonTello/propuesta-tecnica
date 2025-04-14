@@ -288,13 +288,49 @@ th {
   margin-bottom: 0.5rem;
 }
 
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stack-card {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.stack-card:hover {
+  transform: translateY(-5px);
+}
+
+.stack-card img {
+  max-width: 70px;
+  margin-bottom: 1rem;
+}
+
+.stack-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+
+.stack-card p {
+  font-size: 0.95rem;
+  color: #555555;
+}
+
 .stack-section {
   padding: 50px;
   text-align: center;
   background-color: #111;
 }
 
-.stack-section h2{
+.stack-section h2 {
   color: #fff;
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -307,13 +343,6 @@ th {
   gap: 30px;
 }
 
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
 .stack-card {
   background-color: #1f1f1f;
   border-radius: 15px;
@@ -322,10 +351,6 @@ th {
   width: 200px;
   transition: 0.3s ease;
   cursor: pointer;
-}
-
-.stack-card:hover {
-  transform: translateY(-5px);
 }
 
 .stack-card img {
@@ -341,14 +366,8 @@ th {
   font-size: 1.2rem;
 }
 
-.stack-card p {
-  font-size: 0.95rem;
-  color: #555555;
-}
-
 .stack-card:hover {
   background-color: #3a3a3a;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 255, 180, 0.4);
 }
-
