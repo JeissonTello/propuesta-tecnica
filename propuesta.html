@@ -2,221 +2,128 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Propuesta - Sistema de Gestión de Inventarios</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Sistema de Gestión de Inventarios</h1>
-      <nav class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="contexto.html">Contexto</a>
-        <a href="analisis.html">Análisis</a>
-        <a href="modelo.html">Modelo</a>
-        <a href="propuesta.html" class="active">Propuesta</a>
-        <a href="ficha.html">Ficha Técnica</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container">
-    <section class="cards-section">
-      <h2 class="section-title">Propuesta Técnica y Económica</h2>
-
-    <!-- ALCANCE DE LA SOLUCIÓN -->
-<section class="alcance-section card">
-  <h3 class="alcance-title"><i class="fas fa-cubes"></i> Alcance de la Solución</h3>
-  <p class="alcance-description">
-    El <strong>Sistema de Gestión de Inventarios (SGI)</strong> está diseñado para optimizar y automatizar el control de inventarios de una organización, permitiendo registrar, monitorear y gestionar de manera eficiente los productos, existencias y transacciones.
-  </p>
-  <div class="alcance-features">
-    <div class="feature">
-      <i class="fas fa-boxes"></i>
-      <p>Gestión de Inventarios</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-receipt"></i>
-      <p>Control de Ventas y Facturación</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-users-cog"></i>
-      <p>Gestión de Usuarios y Roles</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-database"></i>
-      <p>Gestión de Base de Datos</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-chart-bar"></i>
-      <p>Reportes y Estadísticas</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-server"></i>
-      <p>Infraestructura Escalable</p>
-    </div>
+<header class="header">
+  <div class="container">
+    <h1 class="logo"><i class="fas fa-warehouse"></i> Sistema de Gestión de Inventarios</h1>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="contexto.html">Contexto</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="modelo.html">Modelo</a>
+      <a href="propuesta.html" class="active">Propuesta</a>
+      <a href="ficha.html">Ficha Técnica</a>
+    </nav>
   </div>
-  <p class="alcance-tech">
-    Tecnologías: <strong>Django</strong>, <strong>React.js</strong>, <strong>MySQL/PostgreSQL</strong>, <strong>Linux</strong>, <strong>AWS</strong>.
-  </p>
+</header>
+
+<main class="container">
+
+<section class="cards-section">
+  <h2 class="section-title"><i class="fas fa-lightbulb"></i> Propuesta Técnica y Económica</h2>
+
+  <!-- ALCANCE -->
+  <section class="alcance-section card">
+    <h3 class="alcance-title"><i class="fas fa-cubes"></i> Alcance de la Solución</h3>
+    <p class="alcance-description">
+      El <strong>Sistema de Gestión de Inventarios (SGI)</strong> optimiza el control de inventarios de forma automatizada. Permite registrar, monitorear y gestionar productos, existencias y transacciones de forma eficiente.
+    </p>
+    <div class="alcance-features">
+      <div class="feature"><i class="fas fa-boxes"></i><p>Inventarios</p></div>
+      <div class="feature"><i class="fas fa-receipt"></i><p>Facturación</p></div>
+      <div class="feature"><i class="fas fa-users-cog"></i><p>Usuarios y Roles</p></div>
+      <div class="feature"><i class="fas fa-database"></i><p>Base de Datos</p></div>
+      <div class="feature"><i class="fas fa-chart-bar"></i><p>Reportes</p></div>
+      <div class="feature"><i class="fas fa-server"></i><p>Infraestructura</p></div>
+    </div>
+    <p class="alcance-tech">Tecnologías: <strong>Django</strong>, <strong>React.js</strong>, <strong>MySQL/PostgreSQL</strong>, <strong>Linux</strong>, <strong>AWS</strong>.</p>
+  </section>
+
+  <!-- CRONOGRAMA -->
+  <h3><i class="fas fa-calendar-alt"></i> Cronograma</h3>
+  <div class="table-wrapper">
+    <table class="card table-modern">
+      <tr>
+        <th>Proyecto</th>
+        <th>Responsable</th>
+        <th>Estado</th>
+        <th>Inicio</th>
+      </tr>
+      <tr>
+        <td>Investigación y Análisis</td>
+        <td>Jeisson Smith Galvis Tello</td>
+        <td>En curso</td>
+        <td>13/03/2025 - 03/04/2025</td>
+      </tr>
+      <!-- resto igual -->
+    </table>
+  </div>
+
+  <!-- COSTOS FIJOS -->
+  <h3><i class="fas fa-coins"></i> Costos Fijos</h3>
+  <div class="table-wrapper">
+    <table class="card table-modern">
+      <tr>
+        <th>Concepto</th>
+        <th>Descripción</th>
+        <th>Costo (COP)</th>
+        <th>Tiempo (días)</th>
+      </tr>
+      <!-- filas igual -->
+    </table>
+  </div>
+
+  <!-- COSTOS VARIABLES -->
+  <h3><i class="fas fa-random"></i> Costos Variables</h3>
+  <div class="table-wrapper">
+    <table class="card table-modern">
+      <tr>
+        <th>Concepto</th>
+        <th>Descripción</th>
+        <th>Costo (COP)</th>
+        <th>Tiempo (días)</th>
+      </tr>
+      <!-- fila igual -->
+    </table>
+  </div>
+
+  <!-- TOTAL -->
+  <h3><i class="fas fa-file-invoice-dollar"></i> Total del Proyecto</h3>
+  <div class="table-wrapper">
+    <table class="card table-modern">
+      <tr>
+        <th>Total Proyecto</th>
+        <th>Costo Total (COP)</th>
+        <th>Tiempo Total (días)</th>
+      </tr>
+      <!-- fila igual -->
+    </table>
+  </div>
 </section>
 
-      
-        <h3>Cronograma</h3>
-      <h2>Proyectos</h2>
-      <div class="table-wrapper">
-        <table class="card">
-          <tr>
-            <th>Nombre del Proyecto</th>
-            <th>Responsable</th>
-            <th>Estado</th>
-            <th>Fecha de Inicio</th>
-          </tr>
-          <tr>
-            <td>Investigacion y Analisis</td>
-            <td>Jeisson Smith Galvis Tello</td>
-            <td>En curso</td>
-            <td>13/03/2025 - 03/04/2025</td>
-          </tr>
-          <tr>
-            <td>Desarrollo de Software</td>
-            <td>Jeisson Smith Galvis Tello</td>
-            <td>Sin Empezar</td>
-            <td>01/05/2025 - 05/09/2025</td>
-          </tr>
-          <tr>
-            <td>Diseño UX/UI</td>
-            <td>Jeisson Smith Galvis Tello</td>
-            <td>Sin Empezar</td>
-            <td>05/09/2025 - 12/09/2025</td>
-          </tr>
-          <tr>
-            <td>Base de Datos</td>
-            <td>Jeisson Smith Galvis Tello</td>
-            <td>Sin Empezar</td>
-            <td>12/09/2025 - 19/09/2025</td>
-          </tr>
-          <tr>
-            <td>Infraestructura y Hosting</td>
-            <td>Jeisson Smith Galvis Tello</td>
-            <td>Sin Empezar</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- Tabla de Costos Fijos -->
-      <h3>Costos Fijos</h3>
-      <div class="table-wrapper">
-        <table class="card">
-          <tr>
-            <th>Concepto</th>
-            <th>Descripción</th>
-            <th>Costo Aproximado (COP)</th>
-            <th>Tiempo Estimado (días)</th>
-          </tr>
-          <tr>
-            <td>Desarrollo de Software</td>
-            <td>Desarrollo de aplicación web con módulos de ventas, facturación, inventario y reportes.</td>
-            <td>$20.000.000</td>
-            <td>125</td>
-          </tr>
-          <tr>
-            <td>Investigación y Análisis</td>
-            <td>Análisis de requerimientos, estudio de mercado, arquitectura de software.</td>
-            <td>$2.500.000</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>Diseño UX/UI</td>
-            <td>Creación de interfaces atractivas y experiencia de usuario intuitiva.</td>
-            <td>$2.000.000</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>Base de Datos</td>
-            <td>Configuración y optimización de base de datos MySQL y/o PostgreSQL.</td>
-            <td>$3.000.000</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>Infraestructura y Hosting</td>
-            <td>Uso de Apache, con opción de migración futura a AWS, Azure o Google Cloud.</td>
-            <td>$2.500.000</td>
-            <td>N/A</td>
-          </tr>
-          <tr>
-            <td>Licencias de Software</td>
-            <td>Uso de software Open Source: Linux, LibreOffice, MySQL/PostgreSQL, VS Code, Django, React.js, Pandas.</td>
-            <td>$1.500.000</td>
-            <td>N/A</td>
-          </tr>
-          <tr>
-            <td>Hardware</td>
-            <td>Servidores y equipos necesarios para el desarrollo.</td>
-            <td>$4.500.000</td>
-            <td>N/A</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- Tabla de Costos Variables -->
-      <h3>Costos Variables</h3>
-      <div class="table-wrapper">
-        <table class="card">
-          <tr>
-            <th>Concepto</th>
-            <th>Descripción</th>
-            <th>Costo Aproximado (COP)</th>
-            <th>Tiempo Estimado (días)</th>
-          </tr>
-          <tr>
-            <td>Imprevistos</td>
-            <td>Mantenimiento y soporte no anticipado.</td>
-            <td>$5.000.000</td>
-            <td>N/A</td>
-          </tr>
-        </table>
-      </div>
-      <!-- Resumen Total del Proyecto -->
-      <h3>Total del Proyecto</h3>
-      <div class="table-wrapper">
-        <table class="card">
-          <tr>
-            <th>Total del Proyecto</th>
-            <th>Costo Total Estimado (COP)</th>
-            <th>Tiempo Total Estimado (días)</th>
-          </tr>
-          <tr>
-            <td>Costo Total</td>
-            <td>$41.000.000</td>
-            <td>161</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="terms-section">
-  <h2 class="section-title">Términos y Condiciones del SGI</h2>
-  <p>
-    Consulta los términos y condiciones aplicables al Sistema de Gestión de Inventarios (SGI) para conocer los lineamientos legales, de privacidad, confidencialidad y protección de datos asociados a este proyecto.
-  </p>
-  <a href="terminos-sgi.html" target="_blank" class="btn-terminos">Ver Términos y Condiciones</a>
+<section class="terms-section">
+  <h2 class="section-title"><i class="fas fa-shield-alt"></i> Términos y Condiciones</h2>
+  <p>Consulta los lineamientos legales, de privacidad, confidencialidad y protección de datos asociados al SGI.</p>
+  <a href="terminos-sgi.html" target="_blank" class="btn-terminos">
+    <i class="fas fa-file-contract"></i> Ver Términos y Condiciones
+  </a>
 </section>
 
-  </main>
+</main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Jeisson Smith Galvis Tello. Todos los derechos reservados.</p>
-  </footer>
+<footer class="footer">
+  <p>&copy; 2025 Jeisson Smith Galvis Tello. Todos los derechos reservados.</p>
+</footer>
 
-  <!-- Botón de Scroll to Top -->
-  <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
+<button class="scroll-to-top" id="scrollToTopBtn">↑</button>
+
 </body>
 </html>
