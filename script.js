@@ -76,3 +76,28 @@ gsap.from(".feature", {
   ease: "back.out(1.7)"
 });
 
+// Animar títulos
+gsap.from(".section-title", {
+  duration: 1,
+  y: -50,
+  opacity: 0,
+  stagger: 0.3
+});
+
+// Animar cards al entrar
+gsap.from(".card", {
+  duration: 1,
+  y: 50,
+  opacity: 0,
+  stagger: 0.2
+});
+
+// Botón scroll to top
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+window.addEventListener("scroll", () => {
+  scrollToTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+});
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
