@@ -60,3 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkVisibility);
   checkVisibility(); // Para las secciones que ya están visibles al cargar la página
 });
+
+gsap.from(".alcance-section", {
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out"
+});
+
+gsap.from(".feature", {
+  duration: 0.8,
+  opacity: 0,
+  scale: 0.8,
+  stagger: 0.2,
+  ease: "back.out(1.7)"
+});
+
