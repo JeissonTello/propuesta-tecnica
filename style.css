@@ -445,4 +445,36 @@ th {
   transform: scale(1.05);
 }
 
+.terms-section {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.terms-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.terms-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.btn-terminos {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-terminos:hover {
+  background-color: #0056b3;
+}
 
