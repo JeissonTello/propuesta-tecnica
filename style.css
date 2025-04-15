@@ -647,3 +647,35 @@ th {
     transform: translateY(0);
   }
 }
+
+/* ESTILO GENERAL PARA TABLAS */
+.tabla-estilizada {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-estilizada th, 
+.tabla-estilizada td {
+  padding: 0.9rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.tabla-estilizada th {
+  background-color: #0a58ca;
+  color: white;
+  font-weight: bold;
+}
+
+.tabla-estilizada td {
+  background-color: #fefefe;
+}
+
+.tabla-estilizada tr:nth-child(even) td {
+  background-color: #f2f6fc;
+}
