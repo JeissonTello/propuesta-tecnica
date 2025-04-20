@@ -177,50 +177,81 @@
       margin-top: 60px;
     }
 
-     /* Preloader Styles */
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #ffffff;
-      z-index: 2000;
-      overflow: hidden;
-    }
-    .loader-line {
-      position: absolute;
-      width: 120%;
-      height: 4px;
-      background: #0a58ca;
-      opacity: 0.8;
-      transform: rotate(45deg) translateX(-100%);
-      animation: slide 1.6s infinite ease-in-out;
-    }
-    .loader-line:nth-child(1) { top: 20%; animation-delay: 0s; }
-    .loader-line:nth-child(2) { top: 40%; animation-delay: 0.4s; }
-    .loader-line:nth-child(3) { top: 60%; animation-delay: 0.8s; }
-    .loader-line:nth-child(4) { top: 80%; animation-delay: 1.2s; }
-    @keyframes slide {
-      0%   { transform: rotate(45deg) translateX(-100%); }
-      50%  { transform: rotate(45deg) translateX(100%); }
-      100% { transform: rotate(45deg) translateX(-100%); }
-    }
-    #preloader.fade-out {
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
+   #preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.line-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: #0ff;
+  animation: moveLine 1.5s infinite ease-in-out;
+  opacity: 0.8;
+  filter: blur(1px) drop-shadow(0 0 5px #0ff);
+}
+
+.line:nth-child(1) {
+  transform: rotate(45deg);
+  animation-delay: 0s;
+}
+.line:nth-child(2) {
+  transform: rotate(135deg);
+  animation-delay: 0.3s;
+}
+.line:nth-child(3) {
+  transform: rotate(225deg);
+  animation-delay: 0.6s;
+}
+.line:nth-child(4) {
+  transform: rotate(315deg);
+  animation-delay: 0.9s;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateY(50px) scaleY(0.5) rotate(var(--rotate));
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) scaleY(1) rotate(var(--rotate));
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scaleY(0.5) rotate(var(--rotate));
+    opacity: 0;
+  }
+}
+
   </style>
 </head>
 <body>
 
   <!-- Preloader Overlay -->
   <div id="preloader">
-    <div class="loader-line"></div>
-    <div class="loader-line"></div>
-    <div class="loader-line"></div>
-    <div class="loader-line"></div>
+  <div class="line-container">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
   </div>
+</div>
+
 
 
   <header>
@@ -298,12 +329,14 @@
   </footer>
 
    <script>
-    // Fade-out and remove preloader when content is loaded
-    window.addEventListener('load', function() {
-      const preloader = document.getElementById('preloader');
-      preloader.classList.add('fade-out');
-      setTimeout(()=> preloader.remove(), 600);
-    });
+    window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 800);
+});
+
   </script>
 
 </body>
