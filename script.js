@@ -101,3 +101,57 @@ scrollToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+const canvas = document.getElementById('loaderCanvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+let lines = [];
+
+for (let i = 0; i < 50; i++) {
+  lines.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    length: Math.random() * 200 + 50,
+    speed: Math.random() * 2 + 0.5,
+    angle: Math.random() * Math.PI * 2
+  });
+}
+
+function animateLines() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = 'rgba(0, 200, 255, 0.7)';
+  ctx.lineWidth = 1.5;
+
+  lines.forEach(line => {
+    let xEnd = line.x + Math.cos(line.angle) * line.length;
+    let yEnd = line.y + Math.sin(line.angle) * line.length;
+
+    ctx.beginPath();
+    ctx.moveTo(line.x, line.y);
+    ctx.lineTo(xEnd, yEnd);
+    ctx.stroke();
+
+    line.x += Math.cos(line.angle) * line.speed;
+    line.y += Math.sin(line.angle) * line.speed;
+
+    if (line.x > canvas.width || line.x < 0 || line.y > canvas.height || line.y < 0) {
+      line.x = Math.random() * canvas.width;
+      line.y = Math.random() * canvas.height;
+    }
+  });
+
+  requestAnimationFrame(animateLines);
+}
+
+animateLines();
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
