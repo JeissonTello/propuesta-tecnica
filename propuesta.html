@@ -103,43 +103,43 @@
     <tr>
       <td>Desarrollo de Software</td>
       <td>Desarrollo de aplicación web con módulos de ventas, facturación, inventario y reportes.</td>
-      <td>$20.000.000</td>
+      <td>$25.000.000</td>
       <td>125</td>
     </tr>
     <tr>
       <td>Investigación y Análisis</td>
       <td>Análisis de requerimientos, estudio de mercado, arquitectura de software.</td>
-      <td>$2.500.000</td>
+      <td>$3.000.000</td>
       <td>20</td>
     </tr>
     <tr>
       <td>Diseño UX/UI</td>
       <td>Creación de interfaces atractivas y experiencia de usuario intuitiva.</td>
-      <td>$2.000.000</td>
+      <td>$2.500.000</td>
       <td>8</td>
     </tr>
     <tr>
       <td>Base de Datos</td>
       <td>Configuración y optimización de base de datos MySQL y/o PostgreSQL.</td>
-      <td>$3.000.000</td>
+      <td>$3.500.000</td>
       <td>8</td>
     </tr>
     <tr>
       <td>Infraestructura y Hosting</td>
       <td>Uso de Apache, con opción de migración futura a AWS, Azure o Google Cloud.</td>
-      <td>$2.500.000</td>
+      <td>$3.000.000</td>
       <td>N/A</td>
     </tr>
     <tr>
       <td>Licencias de Software</td>
       <td>Uso de software Open Source: Linux, LibreOffice, MySQL/PostgreSQL, VS Code, Django, React.js, Pandas.</td>
-      <td>$1.500.000</td>
+      <td>$1.800.000</td>
       <td>N/A</td>
     </tr>
     <tr>
       <td>Hardware</td>
       <td>Servidores y equipos necesarios para el desarrollo.</td>
-      <td>$4.500.000</td>
+      <td>$5.500.000</td>
       <td>N/A</td>
     </tr>
   </table>
@@ -156,9 +156,9 @@
       <th>Tiempo Estimado (días)</th>
     </tr>
     <tr>
-      <td>Imprevistos</td>
-      <td>Mantenimiento y soporte no anticipado.</td>
-      <td>$5.000.000</td>
+      <td>Costos Variables</td>
+      <td>Mantenimiento, soporte e imprevistos.</td>
+      <td>$6.000.000</td>
       <td>N/A</td>
     </tr>
   </table>
@@ -175,12 +175,15 @@
     </tr>
     <tr>
       <td>Costo Total</td>
-      <td>$41.000.000</td>
+      <td>$50.300.000</td>
       <td>161</td>
     </tr>
   </table>
 </div>
 
+<!-- GRÁFICO DE COSTOS -->
+<h3>Gráfica de Costos</h3>
+<canvas id="costosChart" width="400" height="400"></canvas>
 
 <section class="terms-section">
   <h2 class="section-title"><i class="fas fa-shield-alt"></i> Términos y Condiciones</h2>
@@ -197,6 +200,48 @@
 </footer>
 
 <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('costosChart').getContext('2d');
+const costosChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: [
+      'Desarrollo de Software',
+      'Investigación y Análisis',
+      'Diseño UX/UI',
+      'Base de Datos',
+      'Infraestructura y Hosting',
+      'Licencias de Software',
+      'Hardware',
+      'Costos Variables'
+    ],
+    datasets: [{
+      data: [25000000, 3000000, 2500000, 3500000, 3000000, 1800000, 5500000, 6000000],
+      backgroundColor: [
+        '#7E57C2', '#42A5F5', '#66BB6A', '#FFA726',
+        '#26C6DA', '#EF5350', '#AB47BC', '#FFCA28'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        position: 'bottom',
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return context.label + ': $' + context.raw.toLocaleString();
+          }
+        }
+      }
+    }
+  }
+});
+</script>
 
 </body>
 </html>
