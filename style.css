@@ -680,3 +680,14 @@ th {
 .tabla-estilizada tr:nth-child(even) td {
   background-color: #f2f6fc;
 }
+
+.grafico-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+
