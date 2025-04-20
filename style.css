@@ -732,53 +732,5 @@ th {
 }
 
 
-.stack-grid-profesional {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  padding: 20px 0;
-}
-
-.stack-card-profesional {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stack-card-profesional:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.stack-card-profesional img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 16px;
-}
-
-.stack-card-profesional h4 {
-  font-size: 1.2rem;
-  color: #222;
-  margin-bottom: 12px;
-}
-
-.stack-card-profesional p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.4;
-}
-
-.stack-card-profesional a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-
-
 
 
