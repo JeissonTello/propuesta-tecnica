@@ -297,5 +297,14 @@
     <p>&copy; 2025 Sistema de Gestión de Inventarios. Todos los derechos reservados.</p>
   </footer>
 
+   <script>
+    // Fade-out and remove preloader when content is loaded
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('fade-out');
+      setTimeout(()=> preloader.remove(), 600);
+    });
+  </script>
+
 </body>
 </html>
