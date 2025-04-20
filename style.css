@@ -733,4 +733,49 @@ th {
 
 
 
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.conclusion-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.conclusion-card:hover {
+  transform: translateY(-5px);
+}
+
+.conclusion-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.conclusion-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.conclusion-card ul li {
+  margin-bottom: 0.4rem;
+}
+
+.provider-logo {
+  height: 30px;
+  vertical-align: middle;
+}
+
+
+
+
 
