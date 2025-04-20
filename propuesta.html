@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -182,8 +183,10 @@
 </div>
 
 <!-- GRÁFICO DE COSTOS -->
-<h3>Gráfica de Costos</h3>
-<canvas id="costosChart" width="400" height="400"></canvas>
+<h3>Gráfica de Costos del Proyecto</h3>
+<div class="grafico-wrapper">
+  <canvas id="costosChart"></canvas>
+</div>
 
 <section class="terms-section">
   <h2 class="section-title"><i class="fas fa-shield-alt"></i> Términos y Condiciones</h2>
@@ -201,8 +204,7 @@
 
 <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
+  <script>
 const ctx = document.getElementById('costosChart').getContext('2d');
 const costosChart = new Chart(ctx, {
   type: 'doughnut',
@@ -215,27 +217,49 @@ const costosChart = new Chart(ctx, {
       'Infraestructura y Hosting',
       'Licencias de Software',
       'Hardware',
-      'Costos Variables'
+      'Costos Variables (Imprevistos)'
     ],
     datasets: [{
-      data: [25000000, 3000000, 2500000, 3500000, 3000000, 1800000, 5500000, 6000000],
+      data: [20000000, 2500000, 2000000, 3000000, 2500000, 1500000, 4500000, 5000000],
       backgroundColor: [
-        '#7E57C2', '#42A5F5', '#66BB6A', '#FFA726',
-        '#26C6DA', '#EF5350', '#AB47BC', '#FFCA28'
+        '#6A0572', '#AB83A1', '#D799AE', '#9F5F80',
+        '#803D77', '#C774A9', '#AD5389', '#EAB2A0'
       ],
-      borderWidth: 1
+      borderColor: '#1e1e2f',
+      borderWidth: 2,
+      hoverOffset: 20
     }]
   },
   options: {
+    responsive: true,
+    cutout: '70%',
     plugins: {
       legend: {
         position: 'bottom',
+        labels: {
+          color: '#ddd',
+          font: {
+            size: 14
+          },
+          padding: 20
+        }
       },
       tooltip: {
         callbacks: {
           label: function(context) {
-            return context.label + ': $' + context.raw.toLocaleString();
+            let label = context.label || '';
+            let value = context.raw || 0;
+            return `${label}: $${value.toLocaleString('es-CO')}`;
           }
+        }
+      },
+      title: {
+        display: true,
+        text: 'Distribución de Costos (COP)',
+        color: '#fff',
+        font: {
+          size: 18,
+          weight: 'bold'
         }
       }
     }
