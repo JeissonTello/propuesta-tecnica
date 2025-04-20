@@ -744,13 +744,12 @@ th {
   padding: 1.5rem;
   border-radius: 12px;
   background: #f9f9f9;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.8); /* Sombra neón verde */
   transition: transform 0.3s ease;
 }
 
 .conclusion-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.8); /* Sombra neón verde */
 }
 
 .conclusion-card h3 {
