@@ -178,55 +178,27 @@
     }
 
   /* Preloader base */
-#preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 9999;
-  flex-direction: column;
-}
-
 #loaderCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.preloader-text {
-  color: #ffffff;
-  font-size: 24px;
-  font-family: 'Poppins', sans-serif;
-  z-index: 10000;
-  animation: fadeText 1.5s infinite alternate;
-}
-
-@keyframes fadeText {
-  from { opacity: 0.5; }
-  to { opacity: 1; }
-}
-
-#preloader.fade-out {
-  opacity: 0;
-  transition: opacity 1.5s ease;
-  pointer-events: none;
-}
-
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: #000;
+      display: block;
+    }
+    #mainContent {
+      display: none;
+    }
   </style>
 </head>
 <body>
 
   <!-- Preloader Overlay -->
-  <div id="preloader">
-  <canvas id="loaderCanvas"></canvas>
-  <div class="preloader-text">Cargando...</div>
-</div>
+ <canvas id="loaderCanvas"></canvas>
+  <div id="mainContent">
+    <h1 style="color: white; text-align: center; padding-top: 20%;">¡Bienvenido al Sistema!</h1>
+  </div>
 
 
 
@@ -307,94 +279,101 @@
   </footer>
 
    <script>
-   const canvas = document.getElementById('loaderCanvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    const canvas = document.getElementById('loaderCanvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+    const particles = [];
+    const colors = ['#00ffe7', '#ff00de', '#ffc800', '#00ff4c', '#0051ff'];
 
-let particlesArray = [];
-const numParticles = 120;
-
-// Crear partículas
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedX = (Math.random() - 0.5) * 0.7;
-    this.speedY = (Math.random() - 0.5) * 0.7;
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-
-    if(this.x > canvas.width || this.x < 0) this.speedX *= -1;
-    if(this.y > canvas.height || this.y < 0) this.speedY *= -1;
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = '#00d2ff';
-    ctx.fill();
-  }
-}
-
-// Inicializar partículas
-function init() {
-  for (let i = 0; i < numParticles; i++) {
-    particlesArray.push(new Particle());
-  }
-}
-init();
-
-// Dibujar líneas entre partículas cercanas
-function connectParticles() {
-  for (let a = 0; a < particlesArray.length; a++) {
-    for (let b = a; b < particlesArray.length; b++) {
-      let dx = particlesArray[a].x - particlesArray[b].x;
-      let dy = particlesArray[a].y - particlesArray[b].y;
-      let distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < 100) {
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.vx = (Math.random() - 0.5) * 4;
+        this.vy = (Math.random() - 0.5) * 4;
+        this.size = Math.random() * 3 + 1;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset();
+      }
+      draw() {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(0, 210, 255, ${1 - distance/100})`;
-        ctx.lineWidth = 0.5;
-        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-        ctx.stroke();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
       }
     }
-  }
-}
 
-// Animar partículas
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particlesArray.forEach(p => {
-    p.update();
-    p.draw();
-  });
-  connectParticles();
-  requestAnimationFrame(animate);
-}
-animate();
+    for (let i = 0; i < 300; i++) {
+      particles.push(new Particle());
+    }
 
-// Fade al cargar
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  setTimeout(() => {
-    preloader.classList.add("fade-out");
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          let dx = particles[i].x - particles[j].x;
+          let dy = particles[i].y - particles[j].y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = 'rgba(255, 255, 255,' + (1 - dist / 100) + ')';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      drawConnections();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Interacción mouse
+    canvas.addEventListener('mousemove', e => {
+      particles.forEach(p => {
+        let dx = p.x - e.clientX;
+        let dy = p.y - e.clientY;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          p.vx += dx / dist * 0.5;
+          p.vy += dy / dist * 0.5;
+        }
+      });
+    });
+
+    // Salida épica
     setTimeout(() => {
-      preloader.style.display = "none";
-    }, 2500);
-  }, 3000); // visible al menos 2 segundos
-});
+      const fade = setInterval(() => {
+        canvas.style.opacity -= 0.05;
+        if (canvas.style.opacity <= 0) {
+          clearInterval(fade);
+          canvas.style.display = 'none';
+          document.getElementById('mainContent').style.display = 'block';
+        }
+      }, 100);
+    }, 6000);
 
-// Ajuste a redimensionado
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
+    window.addEventListener('resize', () => {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    });
   </script>
 
 </body>
