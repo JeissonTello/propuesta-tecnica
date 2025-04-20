@@ -690,4 +690,46 @@ th {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
 }
 
+.super-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-size: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.super-table thead {
+  background-color: #0a3d62;
+  color: #fff;
+}
+
+.super-table th, .super-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.super-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.super-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.super-table th {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #0a3d62;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
 
